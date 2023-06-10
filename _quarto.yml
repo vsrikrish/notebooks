@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  site-url: "https://viveks.me/notebooks"
+  title: "Notebooks"
+  
+  navbar:
+    right:
+      - about.qmd
+      - icon: house-fill
+        href: https://viveks.me
+      - icon: github
+        href: https://github.com/vsrikrish/notebooks
+      - icon: rss
+        href: index.xml
+  search:
+    location: navbar
+    type: textbox
+
+format:
+  html:
+    theme: litera
+    css: styles.css
+    title-block-style: default
+    pagetitle: "{{< meta title >}}"
+    toc: true
+    toc-location: left
+    reference-location: margin
+    html-math-method: 
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+

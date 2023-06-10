@@ -1,0 +1,16 @@
+---
+listing:
+  contents: posts
+  sort: "title"
+  type: table
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  fields: [title, date, file-modified]
+  feed: true
+  date-format: short
+page-layout: full
+title-block-banner: false
+---
+
+

@@ -1,0 +1,11 @@
+---
+title: "About These Notes"
+about:
+  template: trestles
+toc: false
+toc-location: right
+---
+
+These are my notebooks, which serve mostly to organize my thoughts on topics I find interesting. If they're useful to you, great! If not, oh well. And if they're mostly incoherent, I guess that's to be expected. Nothing is finalized, everything is a work in progress.
+
+If you're also interested in any of these topics and have thoughts, please feel free to [let me know](mailto:viveks@cornell.edu).
