@@ -2,7 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/deep-uncertainty-subjective-probability/index.html"
+      "/posts/deep-uncertainty-subjective-probability/index.html",
+      "/posts/state-space-reconstruction/index.html"
     ]
   }
 ]

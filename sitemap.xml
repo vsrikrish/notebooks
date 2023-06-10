@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</loc>
+    <lastmod>2023-06-10T10:50:02.797Z</lastmod>
+  </url>
+  <url>
     <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
-    <lastmod>2023-06-10T00:39:15.403Z</lastmod>
+    <lastmod>2023-06-10T10:50:03.697Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/index.html</loc>
-    <lastmod>2023-06-10T00:39:16.279Z</lastmod>
+    <lastmod>2023-06-10T10:50:04.117Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/about.html</loc>
-    <lastmod>2023-06-10T00:39:16.631Z</lastmod>
+    <lastmod>2023-06-10T10:50:04.501Z</lastmod>
   </url>
 </urlset>
