@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "posts/deep-uncertainty-subjective-probability/index.html",
+    "href": "posts/deep-uncertainty-subjective-probability/index.html",
+    "title": "Deep Uncertainty and Subjective Probabilities",
+    "section": "",
+    "text": "Deep uncertainty is an extremely useful concept — it’s good to explicitly recognize that there is no consensus probability distribution as a red flag for the use of typical decision-making under uncertainty approaches. However, this can be taken to an extreme level: because there is no consensus distribution, one should avoid the use of probabilities altogether.\n\n\nAs Morgan & Keith (2008) discuss, people impose probabilities when they’re absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.\nThis results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely1 that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes2. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.1 But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this2 This can happen anyway, but we can make it more transparent\n\n\n\nApproaches like robustness and satisfycing are mostly fine: pick a solution that seems acceptable, and then stress-test it to make sure it performs adequately across scenarios3. Of course, this begs the question somewhat, as the robustness and satisfying scores will depend on how frequently poor-performing scenarios are sampled: is this an artifact of the implicit uniform distribution?4 A good sensitivity analysis can diagnose this type of issue, but may not be refelcted in a robustness-maximizing approach.3 Picking the threshold is another issue…4 The RCP example is instructive here: is RCP 8.5 20% of your samples?\nIn other words, should robustness be a tool only for post-facto analysis? It may be inappropriate to use it as an exploratory decision criteria. This case probably reduces to a Bayes estimator with some loss function under the uniform assumption. It would be useful to know what that loss function looks like."
+  },
+  {
+    "objectID": "posts/deep-uncertainty-subjective-probability/index.html#the-problems-with-deep-uncertainty",
+    "href": "posts/deep-uncertainty-subjective-probability/index.html#the-problems-with-deep-uncertainty",
+    "title": "Deep Uncertainty and Subjective Probabilities",
+    "section": "",
+    "text": "Deep uncertainty is an extremely useful concept — it’s good to explicitly recognize that there is no consensus probability distribution as a red flag for the use of typical decision-making under uncertainty approaches. However, this can be taken to an extreme level: because there is no consensus distribution, one should avoid the use of probabilities altogether.\n\n\nAs Morgan & Keith (2008) discuss, people impose probabilities when they’re absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.\nThis results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely1 that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes2. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.1 But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this2 This can happen anyway, but we can make it more transparent\n\n\n\nApproaches like robustness and satisfycing are mostly fine: pick a solution that seems acceptable, and then stress-test it to make sure it performs adequately across scenarios3. Of course, this begs the question somewhat, as the robustness and satisfying scores will depend on how frequently poor-performing scenarios are sampled: is this an artifact of the implicit uniform distribution?4 A good sensitivity analysis can diagnose this type of issue, but may not be refelcted in a robustness-maximizing approach.3 Picking the threshold is another issue…4 The RCP example is instructive here: is RCP 8.5 20% of your samples?\nIn other words, should robustness be a tool only for post-facto analysis? It may be inappropriate to use it as an exploratory decision criteria. This case probably reduces to a Bayes estimator with some loss function under the uniform assumption. It would be useful to know what that loss function looks like."
+  },
+  {
+    "objectID": "posts/deep-uncertainty-subjective-probability/index.html#embracing-subjective-probabilities",
+    "href": "posts/deep-uncertainty-subjective-probability/index.html#embracing-subjective-probabilities",
+    "title": "Deep Uncertainty and Subjective Probabilities",
+    "section": "Embracing Subjective Probabilities",
+    "text": "Embracing Subjective Probabilities\nThe alternative is to lean into subjectivity: based on the domain knowledge the expert has or has elicited, what probabilities would they assign and what does that mean about the decision space? Ideally, the analyst doesn’t stop there and looks at how different assignments of probability influence the decision analysis. This would make both a forwards (probability -&gt; outcome) and backwards (outcomes -&gt; probability) process more transparent."
+  },
+  {
+    "objectID": "posts/deep-uncertainty-subjective-probability/index.html#things-i-need-to-think-about-more",
+    "href": "posts/deep-uncertainty-subjective-probability/index.html#things-i-need-to-think-about-more",
+    "title": "Deep Uncertainty and Subjective Probabilities",
+    "section": "Things I Need To Think About More",
+    "text": "Things I Need To Think About More\n\nWhat is the loss equivalent of robustness?\nHow seriously should we take the epistemic-ethical implications of an analyst refusing to look at probabilities? When is it appropriate?\nCommunicating uncertainties is hard. Is it worse when we’re up front about these being subjective?"
+  },
+  {
+    "objectID": "posts/deep-uncertainty-subjective-probability/index.html#relevant-reading",
+    "href": "posts/deep-uncertainty-subjective-probability/index.html#relevant-reading",
+    "title": "Deep Uncertainty and Subjective Probabilities",
+    "section": "Relevant Reading",
+    "text": "Relevant Reading\n\nMorgan, M. G., & Keith, D. W. (2008). Improving the way we think about projecting future energy use and emissions of carbon dioxide. Climatic Change, 90(3), 189–215. https://doi.org/10.1007/s10584-008-9458-1\nDoss-Gollin, J., & Keller, K. (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management. Earth’s Future, 11(1), e2022EF003044. https://doi.org/10.1029/2022ef003044\nKatzav, J., Thompson, E. L., Risbey, J., Stainforth, D. A., Bradley, S., & Frisch, M. (2021). On the appropriate and inappropriate uses of probability distributions in climate projections and some alternatives. Climatic Change, 169(1), 15. https://doi.org/10.1007/s10584-021-03267-x"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Notebooks",
+    "section": "",
+    "text": "Title\n\n\nDate\n\n\nModified\n\n\n\n\n\n\nDeep Uncertainty and Subjective Probabilities\n\n\n6/9/23\n\n\n6/9/23\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About These Notes",
+    "section": "",
+    "text": "These are my notebooks, which serve mostly to organize my thoughts on topics I find interesting. If they’re useful to you, great! If not, oh well. And if they’re mostly incoherent, I guess that’s to be expected. Nothing is finalized, everything is a work in progress.\nIf you’re also interested in any of these topics and have thoughts, please feel free to let me know."
+  }
+]
