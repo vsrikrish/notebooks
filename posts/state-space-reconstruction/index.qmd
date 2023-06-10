@@ -18,12 +18,12 @@ A nice application of this is in the context of climate change. A common tendenc
 
 ## Main Interest
 
-My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections. The complications in making this tractable are stochasticity^[We would need to reconstruct a Markov process] and dimensionality^[Finding the relevant DAG is expensive.], but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.
+My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections or track the propagation of shocks^["George  Box  has  [almost]  said  "The  only  way  to  find  out  what  will happen  when  a  complex  system  is  disturbed  is  to  disturb  the system,   not   merely   to   observe   it   passively."   These   words   of caution   about   "natural   experiments"   are   uncomfortably   strong. Yet  in  today's  world  we  see  no  alternative  to  accepting  them  as, if anything, too weak." - Mosteller & Tukey (1977)]. The complications in making this tractable are stochasticity^[We would need to reconstruct a Markov process] and dimensionality^[Finding the relevant DAG is expensive.], but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.
 
 ## Things I Need To Think About More
 
 - Methods for reconstructing networks from potentially noisy simulations
-- Use of network invariants for dimension-reduction. Maybe topological data analysis 
+- Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?
 
 ## Relevant Reading
 
@@ -37,7 +37,7 @@ My main interest is in getting this to work on multi-sector networks: can we rec
 - Deyle, E. R., & Sugihara, G. (2011). Generalized theorems for nonlinear state space reconstruction. *PloS One*, 6(3), e18295. <https://doi.org/10.1371/journal.pone.0018295>
 - Shalizi, C. R. (2003, May 12). Optimal Nonlinear Prediction of Random Fields on Networks. arXiv [math.PR]. Retrieved from <http://arxiv.org/abs/math/0305160>
 - Shalizi, C. R., & Moore, C. (2003, March 29). What Is a Macrostate? Subjective Observations and Objective Dynamics. arXiv [cond-mat.stat-mech]. Retrieved from <http://arxiv.org/abs/cond-mat/0303625>
-- Wingate, D., & Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, & S. Roweis (Eds.), Advances in Neural Information Processing Systems (Vol. 20). Retrieved from <https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf>
+- Wingate, D., & Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, & S. Roweis (Eds.), *Advances in Neural Information Processing Systems* (Vol. 20). Retrieved from <https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf>
 
 
 ### Algorithms
@@ -48,7 +48,7 @@ My main interest is in getting this to work on multi-sector networks: can we rec
 - Littman, M. L., Sutton, R. S., & Singh, S. (n.d.). Predictive Representations of State. In *NIPS 2001*. Retrieved from <https://web.eecs.umich.edu/~baveja/Papers/psr.pdf>
 - Chalupka, K., Perona, P., & Eberhardt, F. (2014, December 7). Visual Causal Feature Learning. arXiv [stat.ML]. Retrieved from <http://arxiv.org/abs/1412.2309>
 - Hefny, A., Downey, C., & Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310>
-- Subramanian, J., Sinha, A., Seraj, R., & Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. Journal of Machine Learning Research: JMLR, 23(12), 1–83. Retrieved from <https://jmlr.org/papers/v23/20-1165.html>
+- Subramanian, J., Sinha, A., Seraj, R., & Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. *Journal of Machine Learning Research: JMLR*, 23(12), 1–83. Retrieved from <https://jmlr.org/papers/v23/20-1165.html>
 
 
 
