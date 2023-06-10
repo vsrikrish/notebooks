@@ -9,8 +9,8 @@
 <link>https://viveks.me/notebooks/index.html</link>
 <atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.78</generator>
-<lastBuildDate>Fri, 09 Jun 2023 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.361</generator>
+<lastBuildDate>Fri, 09 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Deep Uncertainty and Subjective Probabilities</title>
   <link>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</link>
@@ -54,22 +54,14 @@
 
 
 </section>
-<aside id="footnotes" class="footnotes footnotes-end-of-document">
-<hr>
-<ol>
 
-
-
-
-</ol>
-</aside>
 
  ]]></description>
-  <category>news</category>
-  <category>code</category>
-  <category>analysis</category>
+  <category>uncertainty</category>
+  <category>decision-making</category>
+  <category>ethics</category>
   <guid>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</guid>
-  <pubDate>Fri, 09 Jun 2023 04:00:00 GMT</pubDate>
+  <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
