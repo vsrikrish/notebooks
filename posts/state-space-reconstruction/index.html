@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -174,7 +193,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="setup-and-theorem">Setup and Theorem</h2>
 <div class="page-columns page-full"><p>Suppose we have a <em>deterministic</em> dynamical system with state <span class="math inline">\(z(t)\)</span> on a smooth manifold of dimension <span class="math inline">\(m\)</span>. Our observations are <span class="math inline">\(x(t) = g(z(t))\)</span><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;often <span class="math inline">\(g(y) = y + \varepsilon_t\)</span>, where <span class="math inline">\(\varepsilon_t\)</span> is some noise process, but this can be more complex.</p></li></div></div>
 <p>For a time horizon <span class="math inline">\(\tau &lt; \infty\)</span> and a positive integer <span class="math inline">\(k\)</span>, set <span class="math display">\[s(t) = (x(t), x(t - \tau), x(t - 2\tau), \ldots, x(t - (k-1) \tau)).\]</span> It turns out <span class="citation" data-cites="Takens1981-gq">(<a href="#ref-Takens1981-gq" role="doc-biblioref">Takens., 1981</a>)</span> that if <span class="math inline">\(k \geq 2m+1\)</span>, then <span class="math display">\[z(t) = \phi(s(t))\]</span> for some diffeomorphism <span class="math inline">\(\phi\)</span>.</p>
-<div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (<a href="#ref-Van_Nes2015-ua" role="doc-biblioref">2015</a>)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li></div></div>
+<div class="no-row-height column-margin column-container"><div id="ref-Takens1981-gq" class="csl-entry" role="listitem">
+Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbulence</span>. In D. A. Rand &amp; L. S. Young (Eds.), <em><span class="nocase"><em>Symposium on Dynamical Systems and Turbulence (</em>Springer Lecture Notes in Mathematics vol. 898)</span></em> (pp. 366–381). Berlin, Germany: Springer. Retrieved from <a href="https://www.crcv.ucf.edu/gauss/info/Takens.pdf">https://www.crcv.ucf.edu/gauss/info/Takens.pdf</a>
+</div></div><div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (<a href="#ref-Van_Nes2015-ua" role="doc-biblioref">2015</a>)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li><div id="ref-Van_Nes2015-ua" class="csl-entry" role="listitem">
+Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &amp; Sugihara, G. (2015). Causal feedbacks in climate change. <em>Nat. Clim. Chang.</em>, <em>5</em>(5), 445–448. <a href="https://doi.org/10.1038/nclimate2568">https://doi.org/10.1038/nclimate2568</a>
+</div></div></div>
 </section>
 <section id="main-interest" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="main-interest">Main Interest</h2>
@@ -214,6 +237,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Hefny, A., Downey, C., &amp; Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310&gt;</li>
 <li>Subramanian, J., Sinha, A., Seraj, R., &amp; Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. <em>Journal of Machine Learning Research: JMLR</em>, 23(12), 1–83. Retrieved from <a href="https://jmlr.org/papers/v23/20-1165.html" class="uri">https://jmlr.org/papers/v23/20-1165.html</a></li>
 </ul>
+
 
 
 </section>

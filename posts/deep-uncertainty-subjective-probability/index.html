@@ -21,7 +21,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -174,7 +193,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="people-impose-probabilities-anyway" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="people-impose-probabilities-anyway">People Impose Probabilities Anyway</h3>
 <p>As <span class="citation" data-cites="Morgan2008-qg">Morgan &amp; Keith (<a href="#ref-Morgan2008-qg" role="doc-biblioref">2008</a>)</span> discuss, people impose probabilities when they’re absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.</p>
-<div class="page-columns page-full"><p>This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this</p></li><li id="fn2"><p><sup>2</sup>&nbsp;This can happen anyway, but we can make it more transparent</p></li></div></div>
+<div class="no-row-height column-margin column-container"><div id="ref-Morgan2008-qg" class="csl-entry" role="listitem">
+Morgan, M. G., &amp; Keith, D. W. (2008). <span class="nocase">Improving the way we think about projecting future energy use and emissions of carbon dioxide</span>. <em>Clim. Change</em>, <em>90</em>, 189–215. <a href="https://doi.org/10.1007/s10584-008-9458-1">https://doi.org/10.1007/s10584-008-9458-1</a>
+</div></div><div class="page-columns page-full"><p>This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this</p></li><li id="fn2"><p><sup>2</sup>&nbsp;This can happen anyway, but we can make it more transparent</p></li></div></div>
 </section>
 <section id="decision-making-deep-uncertainty-and-loss-functions" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="decision-making-deep-uncertainty-and-loss-functions">Decision-Making Deep Uncertainty and Loss Functions</h3>
@@ -201,6 +222,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Doss-Gollin, J., &amp; Keller, K. (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management. <em>Earth’s Future</em>, 11(1), e2022EF003044. <a href="https://doi.org/10.1029/2022ef003044" class="uri">https://doi.org/10.1029/2022ef003044</a></li>
 <li>Katzav, J., Thompson, E. L., Risbey, J., Stainforth, D. A., Bradley, S., &amp; Frisch, M. (2021). On the appropriate and inappropriate uses of probability distributions in climate projections and some alternatives. <em>Climatic Change</em>, 169(1), 15. <a href="https://doi.org/10.1007/s10584-021-03267-x" class="uri">https://doi.org/10.1007/s10584-021-03267-x</a></li>
 </ul>
+
 
 
 </section>
