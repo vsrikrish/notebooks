@@ -11,7 +11,7 @@ Deep uncertainty is an extremely useful concept --- it's good to explicitly reco
 
 ### People Impose Probabilities Anyway
 
-As Morgan & Keith (2008) discuss, people impose probabilities when they're absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.
+As @Morgan2008-qg discuss, people impose probabilities when they're absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.
 
 This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It's also unlikely^[But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this] that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst's knowledge, but may also result in political differences emerging by working backwards from desired outcomes^[This can happen anyway, but we can make it more transparent]. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.
 
@@ -33,6 +33,6 @@ The alternative is to lean into subjectivity: based on the domain knowledge the 
 
 ## Relevant Reading
 
-* Morgan, M. G., & Keith, D. W. (2008). Improving the way we think about projecting future energy use and emissions of carbon dioxide. Climatic Change, 90(3), 189–215. <https://doi.org/10.1007/s10584-008-9458-1>
-* Doss-Gollin, J., & Keller, K. (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management. Earth’s Future, 11(1), e2022EF003044. <https://doi.org/10.1029/2022ef003044>
-* Katzav, J., Thompson, E. L., Risbey, J., Stainforth, D. A., Bradley, S., & Frisch, M. (2021). On the appropriate and inappropriate uses of probability distributions in climate projections and some alternatives. Climatic Change, 169(1), 15. <https://doi.org/10.1007/s10584-021-03267-x>
+- Morgan, M. G., & Keith, D. W. (2008). Improving the way we think about projecting future energy use and emissions of carbon dioxide. *Climatic Change*, 90(3), 189–215. <https://doi.org/10.1007/s10584-008-9458-1>
+- Doss-Gollin, J., & Keller, K. (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management. *Earth’s Future*, 11(1), e2022EF003044. <https://doi.org/10.1029/2022ef003044>
+- Katzav, J., Thompson, E. L., Risbey, J., Stainforth, D. A., Bradley, S., & Frisch, M. (2021). On the appropriate and inappropriate uses of probability distributions in climate projections and some alternatives. *Climatic Change*, 169(1), 15. <https://doi.org/10.1007/s10584-021-03267-x>
