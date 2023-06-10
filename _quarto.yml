@@ -23,7 +23,6 @@ format:
     theme: litera
     css: styles.css
     title-block-style: default
-    pagetitle: "{{< meta title >}}"
     toc: true
     toc-location: left
     reference-location: margin
