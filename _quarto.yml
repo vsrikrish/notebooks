@@ -28,6 +28,7 @@ format:
     reference-location: margin
     bibliography: references.bib
     csl: american-geophysical-union.csl
+    citation-location: margin
     suppress-bibliography: true
     html-math-method: 
       method: mathjax
