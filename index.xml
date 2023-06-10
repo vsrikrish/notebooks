@@ -23,7 +23,11 @@
 <h2 class="anchored" data-anchor-id="setup-and-theorem">Setup and Theorem</h2>
 <div class="page-columns page-full"><p>Suppose we have a <em>deterministic</em> dynamical system with state <img src="https://latex.codecogs.com/png.latex?z(t)"> on a smooth manifold of dimension <img src="https://latex.codecogs.com/png.latex?m">. Our observations are <img src="https://latex.codecogs.com/png.latex?x(t)%20=%20g(z(t))"><sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;often <img src="https://latex.codecogs.com/png.latex?g(y)%20=%20y%20+%20%5Cvarepsilon_t">, where <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon_t"> is some noise process, but this can be more complex.</p></li></div></div>
 <p>For a time horizon <img src="https://latex.codecogs.com/png.latex?%5Ctau%20%3C%20%5Cinfty"> and a positive integer <img src="https://latex.codecogs.com/png.latex?k">, set <img src="https://latex.codecogs.com/png.latex?s(t)%20=%20(x(t),%20x(t%20-%20%5Ctau),%20x(t%20-%202%5Ctau),%20%5Cldots,%20x(t%20-%20(k-1)%20%5Ctau))."> It turns out <span class="citation" data-cites="Takens1981-gq">(Takens., 1981)</span> that if <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%202m+1">, then <img src="https://latex.codecogs.com/png.latex?z(t)%20=%20%5Cphi(s(t))"> for some diffeomorphism <img src="https://latex.codecogs.com/png.latex?%5Cphi">.</p>
-<div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<sup>2</sup> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<sup>3</sup>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (2015)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li></div></div>
+<div class="no-row-height column-margin column-container"><div id="ref-Takens1981-gq" class="csl-entry">
+Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbulence</span>. In D. A. Rand &amp; L. S. Young (Eds.), <em><span class="nocase"><em>Symposium on Dynamical Systems and Turbulence (</em>Springer Lecture Notes in Mathematics vol. 898)</span></em> (pp. 366–381). Berlin, Germany: Springer. Retrieved from <a href="https://www.crcv.ucf.edu/gauss/info/Takens.pdf">https://www.crcv.ucf.edu/gauss/info/Takens.pdf</a>
+</div></div><div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<sup>2</sup> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<sup>3</sup>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (2015)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li><div id="ref-Van_Nes2015-ua" class="csl-entry">
+Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &amp; Sugihara, G. (2015). Causal feedbacks in climate change. <em>Nat. Clim. Chang.</em>, <em>5</em>(5), 445–448. <a href="https://doi.org/10.1038/nclimate2568">https://doi.org/10.1038/nclimate2568</a>
+</div></div></div>
 </section>
 <section id="main-interest" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="main-interest">Main Interest</h2>
@@ -70,14 +74,7 @@
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
-<div id="ref-Van_Nes2015-ua" class="csl-entry">
-Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &amp; Sugihara, G. (2015). Causal feedbacks in climate change. <em>Nat. Clim. Chang.</em>, <em>5</em>(5), 445–448. <a href="https://doi.org/10.1038/nclimate2568">https://doi.org/10.1038/nclimate2568</a>
-</div>
-<div id="ref-Takens1981-gq" class="csl-entry">
-Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbulence</span>. In D. A. Rand &amp; L. S. Young (Eds.), <em><span class="nocase"><em>Symposium on Dynamical Systems and Turbulence (</em>Springer Lecture Notes in Mathematics vol. 898)</span></em> (pp. 366–381). Berlin, Germany: Springer. Retrieved from <a href="https://www.crcv.ucf.edu/gauss/info/Takens.pdf">https://www.crcv.ucf.edu/gauss/info/Takens.pdf</a>
-</div>
-</div></section></div> ]]></description>
+ ]]></description>
   <category>math</category>
   <category>stats</category>
   <guid>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</guid>
@@ -96,7 +93,9 @@ Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbule
 <section id="people-impose-probabilities-anyway" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="people-impose-probabilities-anyway">People Impose Probabilities Anyway</h3>
 <p>As <span class="citation" data-cites="Morgan2008-qg">Morgan &amp; Keith (2008)</span> discuss, people impose probabilities when they’re absent. The Representative Concentration Pathways (RCPs) are a good example: in the absence of guidance about probabilities, various papers have treated all of the RCPs as equally likely (equivalent to a uniform distribution), or focused on specific RCPs at the expense of others (implicitly assigning uneven probabilities). For example, many papers focus on RCP 8.5, the most extreme scenario: in some cases, this gives the highest climate-change-signal-to-noise ratio, but this actually appears to be a highly unlikely scenario, and without that contextualization, this can create biases in decision-making.</p>
-<div class="page-columns page-full"><p>This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely<sup>1</sup> that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes<sup>2</sup>. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this</p></li><li id="fn2"><p><sup>2</sup>&nbsp;This can happen anyway, but we can make it more transparent</p></li></div></div>
+<div class="no-row-height column-margin column-container"><div id="ref-Morgan2008-qg" class="csl-entry">
+Morgan, M. G., &amp; Keith, D. W. (2008). <span class="nocase">Improving the way we think about projecting future energy use and emissions of carbon dioxide</span>. <em>Clim. Change</em>, <em>90</em>, 189–215. <a href="https://doi.org/10.1007/s10584-008-9458-1">https://doi.org/10.1007/s10584-008-9458-1</a>
+</div></div><div class="page-columns page-full"><p>This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely<sup>1</sup> that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes<sup>2</sup>. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this</p></li><li id="fn2"><p><sup>2</sup>&nbsp;This can happen anyway, but we can make it more transparent</p></li></div></div>
 </section>
 <section id="decision-making-deep-uncertainty-and-loss-functions" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="decision-making-deep-uncertainty-and-loss-functions">Decision-Making Deep Uncertainty and Loss Functions</h3>
@@ -129,11 +128,7 @@ Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbule
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2">
-<div id="ref-Morgan2008-qg" class="csl-entry">
-Morgan, M. G., &amp; Keith, D. W. (2008). <span class="nocase">Improving the way we think about projecting future energy use and emissions of carbon dioxide</span>. <em>Clim. Change</em>, <em>90</em>, 189–215. <a href="https://doi.org/10.1007/s10584-008-9458-1">https://doi.org/10.1007/s10584-008-9458-1</a>
-</div>
-</div></section></div> ]]></description>
+ ]]></description>
   <category>uncertainty</category>
   <category>decision-making</category>
   <category>ethics</category>
