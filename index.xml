@@ -27,13 +27,13 @@
 </section>
 <section id="main-interest" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="main-interest">Main Interest</h2>
-<div class="page-columns page-full"><p>My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections. The complications in making this tractable are stochasticity<sup>4</sup> and dimensionality<sup>5</sup>, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;We would need to reconstruct a Markov process</p></li><li id="fn5"><p><sup>5</sup>&nbsp;Finding the relevant DAG is expensive.</p></li></div></div>
+<div class="page-columns page-full"><p>My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections or track the propagation of shocks<sup>4</sup>. The complications in making this tractable are stochasticity<sup>5</sup> and dimensionality<sup>6</sup>, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;“George Box has [almost] said”The only way to find out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively.” These words of caution about “natural experiments” are uncomfortably strong. Yet in today’s world we see no alternative to accepting them as, if anything, too weak.” - Mosteller &amp; Tukey (1977)</p></li><li id="fn5"><p><sup>5</sup>&nbsp;We would need to reconstruct a Markov process</p></li><li id="fn6"><p><sup>6</sup>&nbsp;Finding the relevant DAG is expensive.</p></li></div></div>
 </section>
 <section id="things-i-need-to-think-about-more" class="level2">
 <h2 class="anchored" data-anchor-id="things-i-need-to-think-about-more">Things I Need To Think About More</h2>
 <ul>
 <li>Methods for reconstructing networks from potentially noisy simulations</li>
-<li>Use of network invariants for dimension-reduction. Maybe topological data analysis</li>
+<li>Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?</li>
 </ul>
 </section>
 <section id="relevant-reading" class="level2">
@@ -49,7 +49,7 @@
 <li>Deyle, E. R., &amp; Sugihara, G. (2011). Generalized theorems for nonlinear state space reconstruction. <em>PloS One</em>, 6(3), e18295. <a href="https://doi.org/10.1371/journal.pone.0018295" class="uri">https://doi.org/10.1371/journal.pone.0018295</a></li>
 <li>Shalizi, C. R. (2003, May 12). Optimal Nonlinear Prediction of Random Fields on Networks. arXiv [math.PR]. Retrieved from <a href="http://arxiv.org/abs/math/0305160" class="uri">http://arxiv.org/abs/math/0305160</a></li>
 <li>Shalizi, C. R., &amp; Moore, C. (2003, March 29). What Is a Macrostate? Subjective Observations and Objective Dynamics. arXiv [cond-mat.stat-mech]. Retrieved from <a href="http://arxiv.org/abs/cond-mat/0303625" class="uri">http://arxiv.org/abs/cond-mat/0303625</a></li>
-<li>Wingate, D., &amp; Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, &amp; S. Roweis (Eds.), Advances in Neural Information Processing Systems (Vol. 20). Retrieved from <a href="https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf" class="uri">https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf</a></li>
+<li>Wingate, D., &amp; Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, &amp; S. Roweis (Eds.), <em>Advances in Neural Information Processing Systems</em> (Vol. 20). Retrieved from <a href="https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf" class="uri">https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf</a></li>
 </ul>
 </section>
 <section id="algorithms" class="level3">
@@ -61,7 +61,7 @@
 <li>Littman, M. L., Sutton, R. S., &amp; Singh, S. (n.d.). Predictive Representations of State. In <em>NIPS 2001</em>. Retrieved from <a href="https://web.eecs.umich.edu/~baveja/Papers/psr.pdf" class="uri">https://web.eecs.umich.edu/~baveja/Papers/psr.pdf</a></li>
 <li>Chalupka, K., Perona, P., &amp; Eberhardt, F. (2014, December 7). Visual Causal Feature Learning. arXiv [stat.ML]. Retrieved from <a href="http://arxiv.org/abs/1412.2309" class="uri">http://arxiv.org/abs/1412.2309</a></li>
 <li>Hefny, A., Downey, C., &amp; Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310&gt;</li>
-<li>Subramanian, J., Sinha, A., Seraj, R., &amp; Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. Journal of Machine Learning Research: JMLR, 23(12), 1–83. Retrieved from <a href="https://jmlr.org/papers/v23/20-1165.html" class="uri">https://jmlr.org/papers/v23/20-1165.html</a></li>
+<li>Subramanian, J., Sinha, A., Seraj, R., &amp; Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. <em>Journal of Machine Learning Research: JMLR</em>, 23(12), 1–83. Retrieved from <a href="https://jmlr.org/papers/v23/20-1165.html" class="uri">https://jmlr.org/papers/v23/20-1165.html</a></li>
 </ul>
 
 

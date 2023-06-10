@@ -18,14 +18,14 @@
     "href": "posts/state-space-reconstruction/index.html#main-interest",
     "title": "State-Space Reconstruction",
     "section": "Main Interest",
-    "text": "Main Interest\nMy main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections. The complications in making this tractable are stochasticity4 and dimensionality5, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.4 We would need to reconstruct a Markov process5 Finding the relevant DAG is expensive."
+    "text": "Main Interest\nMy main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections or track the propagation of shocks4. The complications in making this tractable are stochasticity5 and dimensionality6, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.4 “George Box has [almost] said”The only way to find out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively.” These words of caution about “natural experiments” are uncomfortably strong. Yet in today’s world we see no alternative to accepting them as, if anything, too weak.” - Mosteller & Tukey (1977)5 We would need to reconstruct a Markov process6 Finding the relevant DAG is expensive."
   },
   {
     "objectID": "posts/state-space-reconstruction/index.html#things-i-need-to-think-about-more",
     "href": "posts/state-space-reconstruction/index.html#things-i-need-to-think-about-more",
     "title": "State-Space Reconstruction",
     "section": "Things I Need To Think About More",
-    "text": "Things I Need To Think About More\n\nMethods for reconstructing networks from potentially noisy simulations\nUse of network invariants for dimension-reduction. Maybe topological data analysis"
+    "text": "Things I Need To Think About More\n\nMethods for reconstructing networks from potentially noisy simulations\nUse of network invariants for dimension-reduction. Maybe topological data analysis has some application?"
   },
   {
     "objectID": "posts/state-space-reconstruction/index.html#relevant-reading",
