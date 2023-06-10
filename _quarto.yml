@@ -28,7 +28,8 @@ format:
     reference-location: margin
     bibliography: references.bib
     csl: american-geophysical-union.csl
-    citation-hover: true
+    citation-hover: false
+    citation-location: margin
     html-math-method: 
       method: mathjax
       url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
