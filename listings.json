@@ -2,10 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/deep-uncertainty-subjective-probability/index.html",
-      "/posts/model-discrepancy/index.html",
       "/posts/robustness/index.html",
-      "/posts/state-space-reconstruction/index.html"
+      "/posts/state-space-reconstruction/index.html",
+      "/posts/deep-uncertainty-subjective-probability/index.html",
+      "/posts/model-discrepancy/index.html"
     ]
   }
 ]
