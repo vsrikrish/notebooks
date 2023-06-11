@@ -159,6 +159,22 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
@@ -169,10 +185,10 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr>
 <th>
-Title
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
 </th>
 <th>
-Date
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
 </th>
 <th>
 Modified
@@ -180,7 +196,7 @@ Modified
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="uncertainty,decision-making,ethics" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="3" data-listing-title-sort="Deep Uncertainty and Subjective Probabilities" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="uncertainty,decision-making,ethics" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1686487764846" data-listing-date-modified-sort="1686487764000" data-listing-reading-time-sort="3" data-listing-title-sort="Deep Uncertainty and Subjective Probabilities" data-listing-filename-sort="index.qmd">
 <td>
 <a href="./posts/deep-uncertainty-subjective-probability/index.html" class="title listing-title">Deep Uncertainty and Subjective Probabilities</a>
 </td>
@@ -191,7 +207,7 @@ Modified
 <span class="listing-file-modified">6/11/23</span>
 </td>
 </tr>
-<tr data-index="1" data-categories="stats" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="1" data-listing-title-sort="Model Discrepancy" data-listing-filename-sort="index.qmd">
+<tr data-index="1" data-categories="stats" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1686487764846" data-listing-date-modified-sort="1686487764000" data-listing-reading-time-sort="1" data-listing-title-sort="Model Discrepancy" data-listing-filename-sort="index.qmd">
 <td>
 <a href="./posts/model-discrepancy/index.html" class="title listing-title">Model Discrepancy</a>
 </td>
@@ -202,7 +218,7 @@ Modified
 <span class="listing-file-modified">6/11/23</span>
 </td>
 </tr>
-<tr data-index="2" data-categories="uncertainty,decision-making" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="5" data-listing-title-sort="Robustness" data-listing-filename-sort="index.qmd">
+<tr data-index="2" data-categories="uncertainty,decision-making" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487764846" data-listing-date-modified-sort="1686487764000" data-listing-reading-time-sort="5" data-listing-title-sort="Robustness" data-listing-filename-sort="index.qmd">
 <td>
 <a href="./posts/robustness/index.html" class="title listing-title">Robustness</a>
 </td>
@@ -213,7 +229,7 @@ Modified
 <span class="listing-file-modified">6/11/23</span>
 </td>
 </tr>
-<tr data-index="3" data-categories="math,stats" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="5" data-listing-title-sort="State-Space Reconstruction" data-listing-filename-sort="index.qmd">
+<tr data-index="3" data-categories="math,stats" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487764846" data-listing-date-modified-sort="1686487764000" data-listing-reading-time-sort="5" data-listing-title-sort="State-Space Reconstruction" data-listing-filename-sort="index.qmd">
 <td>
 <a href="./posts/state-space-reconstruction/index.html" class="title listing-title">State-Space Reconstruction</a>
 </td>
