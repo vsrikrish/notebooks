@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-06-11">
 
-<title>Notebooks</title>
+<title>Notebooks - Model Discrepancy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,41 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-file-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Notebooks" href="index.xml"></head>
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
 <body class="floating nav-fixed">
 
@@ -104,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Notebooks</span>
     </a>
   </div>
@@ -115,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About These Notes</span></a>
   </li>  
   <li class="nav-item compact">
@@ -129,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -141,96 +109,70 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#relevant-reading" id="toc-relevant-reading" class="nav-link active" data-scroll-target="#relevant-reading">Relevant Reading</a></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="decision-making">decision-making <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ethics">ethics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="math">math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stats">stats <span class="quarto-category-count">(2)</span></div><div class="category" data-category="uncertainty">uncertainty <span class="quarto-category-count">(2)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
-</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Date
-</th>
-<th>
-Modified
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="uncertainty,decision-making,ethics" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="3" data-listing-title-sort="Deep Uncertainty and Subjective Probabilities" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/deep-uncertainty-subjective-probability/index.html" class="title listing-title">Deep Uncertainty and Subjective Probabilities</a>
-</td>
-<td>
-<span class="listing-date">6/9/23</span>
-</td>
-<td>
-<span class="listing-file-modified">6/11/23</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="stats" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="1" data-listing-title-sort="Model Discrepancy" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/model-discrepancy/index.html" class="title listing-title">Model Discrepancy</a>
-</td>
-<td>
-<span class="listing-date">6/11/23</span>
-</td>
-<td>
-<span class="listing-file-modified">6/11/23</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="uncertainty,decision-making" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="5" data-listing-title-sort="Robustness" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/robustness/index.html" class="title listing-title">Robustness</a>
-</td>
-<td>
-<span class="listing-date">6/10/23</span>
-</td>
-<td>
-<span class="listing-file-modified">6/11/23</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="math,stats" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686487627449" data-listing-date-modified-sort="1686487627000" data-listing-reading-time-sort="5" data-listing-title-sort="State-Space Reconstruction" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/state-space-reconstruction/index.html" class="title listing-title">State-Space Reconstruction</a>
-</td>
-<td>
-<span class="listing-date">6/10/23</span>
-</td>
-<td>
-<span class="listing-file-modified">6/11/23</span>
-</td>
-</tr>
-</tbody>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Model Discrepancy</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">stats</div>
+  </div>
+  </div>
 
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 11, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 11, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>Model discrepancy refers to systematic mismatches between model and data. This is conceptually different from observation error (which is typically assumed to be white noise), though both combine to produce the model residuals. When discrepancy is assumed to be normal, non-identifiability makes it challenging to separate from observation error, so these are usually lumped together, but this is usually a poor choice in environmental application.</p>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<ul>
+<li>Kennedy, M. C., &amp; O’Hagan, A. (2001). Bayesian calibration of computer models. <em>Journal of the Royal Statistical Society. Series B, Statistical Methodology</em>, 63(3), 425–464. <a href="https://doi.org/10.1111/1467-9868.00294" class="uri">https://doi.org/10.1111/1467-9868.00294</a></li>
+<li>Brynjarsdóttir, J., &amp; OʼHagan, A. (2014). Learning about physical parameters: the importance of model discrepancy. <em>Inverse Problems</em>, 30(11), 114007. <a href="https://doi.org/10.1088/0266-5611/30/11/114007" class="uri">https://doi.org/10.1088/0266-5611/30/11/114007</a></li>
+<li>Jiang, B., Wu, T.-Y., &amp; Wong, W. H. (2018). Approximate Bayesian Computation with Kullback-Leibler Divergence as Data Discrepancy. In A. Storkey &amp; F. Perez-Cruz (Eds.), <em>Proceedings of the Twenty-First International Conference on Artificial Intelligence and Statistics</em> (Vol. 84, pp.&nbsp;1711–1721). Lanzarote, Spain: PMLR. Retrieved from <a href="https://proceedings.mlr.press/v84/jiang18a.html" class="uri">https://proceedings.mlr.press/v84/jiang18a.html</a></li>
+<li>Gardner, P., Rogers, T. J., Lord, C., &amp; Barthorpe, R. J. (2019). Learning of model discrepancy for structural dynamics applications using Bayesian history matching. <em>Journal of Physics. Conference Series</em>, 1264(1), 012052. <a href="https://doi.org/10.1088/1742-6596/1264/1/012052" class="uri">https://doi.org/10.1088/1742-6596/1264/1/012052</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

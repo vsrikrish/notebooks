@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://viveks.me/notebooks/posts/robustness/index.html</loc>
-    <lastmod>2023-06-11T12:36:56.344Z</lastmod>
+    <lastmod>2023-06-11T12:47:31.782Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</loc>
-    <lastmod>2023-06-11T12:36:57.436Z</lastmod>
+    <lastmod>2023-06-11T12:47:32.786Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
-    <lastmod>2023-06-11T12:36:57.892Z</lastmod>
+    <lastmod>2023-06-11T12:47:33.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/model-discrepancy/index.html</loc>
+    <lastmod>2023-06-11T12:47:33.594Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/index.html</loc>
-    <lastmod>2023-06-11T12:36:58.304Z</lastmod>
+    <lastmod>2023-06-11T12:47:34.018Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/about.html</loc>
-    <lastmod>2023-06-11T12:36:58.664Z</lastmod>
+    <lastmod>2023-06-11T12:47:34.326Z</lastmod>
   </url>
 </urlset>

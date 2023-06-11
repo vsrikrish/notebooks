@@ -10,7 +10,32 @@
 <atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 11 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Model Discrepancy</title>
+  <link>https://viveks.me/notebooks/posts/model-discrepancy/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Model discrepancy refers to systematic mismatches between model and data. This is conceptually different from observation error (which is typically assumed to be white noise), though both combine to produce the model residuals. When discrepancy is assumed to be normal, non-identifiability makes it challenging to separate from observation error, so these are usually lumped together, but this is usually a poor choice in environmental application.</p>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<ul>
+<li>Kennedy, M. C., &amp; O’Hagan, A. (2001). Bayesian calibration of computer models. <em>Journal of the Royal Statistical Society. Series B, Statistical Methodology</em>, 63(3), 425–464. <a href="https://doi.org/10.1111/1467-9868.00294" class="uri">https://doi.org/10.1111/1467-9868.00294</a></li>
+<li>Brynjarsdóttir, J., &amp; OʼHagan, A. (2014). Learning about physical parameters: the importance of model discrepancy. <em>Inverse Problems</em>, 30(11), 114007. <a href="https://doi.org/10.1088/0266-5611/30/11/114007" class="uri">https://doi.org/10.1088/0266-5611/30/11/114007</a></li>
+<li>Jiang, B., Wu, T.-Y., &amp; Wong, W. H. (2018). Approximate Bayesian Computation with Kullback-Leibler Divergence as Data Discrepancy. In A. Storkey &amp; F. Perez-Cruz (Eds.), <em>Proceedings of the Twenty-First International Conference on Artificial Intelligence and Statistics</em> (Vol. 84, pp.&nbsp;1711–1721). Lanzarote, Spain: PMLR. Retrieved from <a href="https://proceedings.mlr.press/v84/jiang18a.html" class="uri">https://proceedings.mlr.press/v84/jiang18a.html</a></li>
+<li>Gardner, P., Rogers, T. J., Lord, C., &amp; Barthorpe, R. J. (2019). Learning of model discrepancy for structural dynamics applications using Bayesian history matching. <em>Journal of Physics. Conference Series</em>, 1264(1), 012052. <a href="https://doi.org/10.1088/1742-6596/1264/1/012052" class="uri">https://doi.org/10.1088/1742-6596/1264/1/012052</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>stats</category>
+  <guid>https://viveks.me/notebooks/posts/model-discrepancy/index.html</guid>
+  <pubDate>Sun, 11 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Robustness</title>
   <link>https://viveks.me/notebooks/posts/robustness/index.html</link>
