@@ -12,6 +12,74 @@
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Sat, 10 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>Robustness</title>
+  <link>https://viveks.me/notebooks/posts/robustness/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Robustness is a vaguely defined term. There are really two different, though related, types of robustness, as the term is commonly used:</p>
+<ol type="1">
+<li>Robustness of a decision, <em>i.e.</em> how well does a particular decision perform under alternative states of the world (SOWs)?</li>
+<li>Robustness of model insights to researcher degrees of freedom/forking paths.</li>
+</ol>
+<p>The former is the focus in this notebook, though the latter is often more interesting and difficult to quantify; often one has to link back to the original system and ensure that the model was adequate (not <em>valid</em>, as commonly used) and that the insights make sense <span class="citation" data-cites="Oreskes1994-br">(Oreskes et al., 1994)</span>.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Oreskes1994-br" class="csl-entry">
+Oreskes, N., Shrader-Frechette, K., &amp; Belitz, K. (1994). <span class="nocase">Verification, validation, and confirmation of numerical models in the earth sciences</span>. <em>Science</em>, <em>263</em>, 641–646. <a href="https://doi.org/10.1126/science.263.5147.641">https://doi.org/10.1126/science.263.5147.641</a>
+</div></div><div class="page-columns page-full"><p>Assessing the robustness of a decision is best done as a summary of a type of sensitivity: pick a solution that seems acceptable under some decision-making method, and then stress-test it to make sure it performs adequately across scenarios<sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Picking the threshold for adequate peformance is another issue…</p></li></div></div>
+<section id="satisfycing" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="satisfycing">Satisfycing</h2>
+<p>Satisfycing measures how often a particular performance threshold is reached across the range of states of the world. In other words, assign a 0-1 loss over the tolerable domain <img src="https://latex.codecogs.com/png.latex?D%20%5Csubset%20X">:</p>
+<p><img src="https://latex.codecogs.com/png.latex?L(%5Cmathbf%7Bx%7D)%20=%20%5Cbegin%7Bcases%7D0%20&amp;%20%5Cmathbf%7Bx%7D%20%5Cin%20D%20%5C%5C%201%20&amp;%20%5Cmathbf%7Bx%7D%20%5Cnotin%20D.%5Cend%7Bcases%7D"></p>
+<p>Then the satisfycing score is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cint_X%20L(%5Cmathbf%7Bx%7D)%20p(x)%20dx%20=%20%5Cint_D%20p(x)%20dx."></p>
+<section id="sensitivity-of-satisfycing-score-to-probabilities" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sensitivity-of-satisfycing-score-to-probabilities">Sensitivity of Satisfycing Score to Probabilities</h3>
+<div class="page-columns page-full"><p>This makes the score sensitive to the probability distribution <img src="https://latex.codecogs.com/png.latex?p"> and the tolerable domain <img src="https://latex.codecogs.com/png.latex?D">. As a result, even if the tolerable threshold is well-defined<sup>2</sup> this begs the question somewhat, as the robustness scores will depend on how frequently poorly-performing scenarios are sampled. A uniform distribution may be the worst option of all<sup>3</sup>. A good sensitivity analysis can diagnose this type of issue, but may not be reflected in a satisfycing approach. <span class="citation" data-cites="Quinn2020-cr">Quinn et al. (2020)</span> shows that this notion of robustness is not itself robust to different scenario samples; this is related to fundamental issues with “Robust Bayes” <span class="citation" data-cites="Gelman2006-eh">(Gelman, 2006)</span>.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Which seems unlikely across stakeholders, but let’s grant that for now…</p></li><li id="fn3"><p><sup>3</sup>&nbsp;The principle of insufficient reason is only one way to express ignorance, and makes no sense for subjective probabilities <span class="citation" data-cites="Kass1996-ro">(Kass &amp; Wasserman, 1996)</span>.</p><div id="ref-Kass1996-ro" class="csl-entry">
+Kass, R. E., &amp; Wasserman, L. (1996). <span class="nocase">The selection of prior distributions by formal rules</span>. <em>J. Am. Stat. Assoc.</em>, <em>91</em>, 1343–1370. <a href="https://doi.org/10.1080/01621459.1996.10477003">https://doi.org/10.1080/01621459.1996.10477003</a>
+</div></li><div id="ref-Quinn2020-cr" class="csl-entry">
+Quinn, J. D., Hadjimichael, A., Reed, P. M., &amp; Steinschneider, S. (2020). <span class="nocase">Can exploratory modeling of water scarcity vulnerabilities and robustness be scenario neutral?</span> <em>Earth’s Future</em>, <em>8</em>, e2020EF001650. <a href="https://doi.org/10.1029/2020EF001650">https://doi.org/10.1029/2020EF001650</a>
+</div><div id="ref-Gelman2006-eh" class="csl-entry">
+Gelman, A. (2006). <span class="nocase">The boxer, the wrestler, and the coin flip: A paradox of robust bayesian inference and belief functions</span>. <em>Am. Stat.</em>, <em>60</em>, 146–150. <a href="https://doi.org/10.1198/000313006X106190">https://doi.org/10.1198/000313006X106190</a>
+</div></div></div>
+<p>For analyzing a single decision or a set of decisions, this approach is likely fine to understand the sensitivity of the decision’s adequacy to mis-parameterization. Things get worse when trying to use robustness as an objective for the decision analysis, particularly when probabilities are diffuse or ill-characterized, as obtaining the state(s) of the world used in the analysis is itself fraught and/or relies on subjective probabilities anyway: the resulting decision is itself likely highly sensitive to any number of decisions in the problem setup, and now we’re back at the other kind of robustness.</p>
+</section>
+<section id="model-discrepancy" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="model-discrepancy">Model Discrepancy</h3>
+<div class="page-columns page-full"><p>There’s also another, maybe more fundamental issue: <a href="../model-discrepancy/">model discrepancy</a>. If your performance threshold is <img src="https://latex.codecogs.com/png.latex?%5Ctau"> and the model prediction for a state of the world <img src="https://latex.codecogs.com/png.latex?s"> is <img src="https://latex.codecogs.com/png.latex?F(s)">, you want to know if <img src="https://latex.codecogs.com/png.latex?f(s)%20%3E%20%5Ctau">. But if <img src="https://latex.codecogs.com/png.latex?F"> has a discrepancy <img src="https://latex.codecogs.com/png.latex?%5Czeta(s)">, you could mis-score <img src="https://latex.codecogs.com/png.latex?s"> if <img src="https://latex.codecogs.com/png.latex?%5Czeta"> moves you to the other side of <img src="https://latex.codecogs.com/png.latex?%5Ctau">, with potentially important implications<sup>4</sup></p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;This isn’t unique to the robustness setting, either: it applies to any model-based decision analysis with a 0-1 loss. For example, we should talk about this more in the context of pathways to zero emissions.</p></li></div></div>
+</section>
+</section>
+<section id="regret" class="level2">
+<h2 class="anchored" data-anchor-id="regret">Regret</h2>
+<p>Regret is fine and reasonably sensible: it’s a Bayesian score with a loss of the following type:</p>
+<p><img src="https://latex.codecogs.com/png.latex?L(%5Cmathbf%7Bx%7D)%20=%20%5Cbegin%7Bcases%7D0%20&amp;%20if%20%5Cmathbf%7Bx%7D%20%5Cin%20D%20%5C%5C%20R(%5C%7C%20%5Cmathbf%7Bx%7D%20-%20%5Ctau%20%5C%7C)%20&amp;%20if%20%5Cmathbf%7Bx%7D%20%5Cnotin%20D,%5Cend%7Bcases%7D"> where <img src="https://latex.codecogs.com/png.latex?%5C%7C%20%5Ccdot%20%5C%7C"> is some metric over outcomes. Nothing too interesting, and likely leads to more sensible rankings than satisfycing when they differ. I also think it’s preferable for decision-making to losses which are more mathematical constructs than decision-relevant, like mean or logarithmic losses. For certain choices of <img src="https://latex.codecogs.com/png.latex?L">, this also helps smooth out the model discrepancy issue, since you can make the loss within some neighborhood of the boundary of <img src="https://latex.codecogs.com/png.latex?D"> positive as a buffer and adjust <img src="https://latex.codecogs.com/png.latex?R"> to smooth the transition from <img src="https://latex.codecogs.com/png.latex?D"> to a high-regret region. It might be interesting to explore this in a quick paper, maybe for the shallow lake problem or coastal flood risk.</p>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See Also</h2>
+<p><a href="../deep-uncertainty-subjective-probability/">Deep Uncertainty and Subjective Probabilities</a></p>
+</section>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<ul>
+<li>Herman, J. D., Reed, P. M., Zeff, H. B., &amp; Characklis, G. W. (2015). How should robustness be defined for water systems planning under change? <em>Journal of Water Resources Planning and Management</em>, 141(10), 04015012. <a href="https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509" class="uri">https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509</a></li>
+<li>Giuliani, M., &amp; Castelletti, A. (4/2016). Is robustness really robust? How different definitions of robustness impact decision-making under climate change. <em>Climatic Change</em>, 135(3–4), 409–424. <a href="https://doi.org/10.1007/s10584-015-1586-9" class="uri">https://doi.org/10.1007/s10584-015-1586-9</a></li>
+<li>McPhail, C., Maier, H. R., Kwakkel, J., Giuliani, M., &amp; Westra, S. (2018). Robustness Metrics: How Are They Calculated, When Should They Be Used and Why Do They Give Different Results? <em>Earth’s Future</em>, 6(2)). <a href="https://doi.org/10.1002/2017EF000649" class="uri">https://doi.org/10.1002/2017EF000649</a></li>
+<li>McPhail, C., Maier, H. R., Westra, S., Kwakkel, J. H., &amp; Linden, L. (09/2020). Impact of scenario selection on robustness. <em>Water Resources Research</em>, 56(9). <a href="https://doi.org/10.1029/2019WR026515" class="uri">https://doi.org/10.1029/2019WR026515</a></li>
+<li>Quinn, J. D., Hadjimichael, A., Reed, P. M., &amp; Steinschneider, S. (2020). Can exploratory modeling of water scarcity vulnerabilities and robustness be scenario neutral? <em>Earth’s Future</em>, 8(11), e2020EF001650. <a href="https://doi.org/10.1029/2020EF001650" class="uri">https://doi.org/10.1029/2020EF001650</a></li>
+</ul>
+
+
+
+</section>
+
+
+ ]]></description>
+  <category>uncertainty</category>
+  <category>decision-making</category>
+  <guid>https://viveks.me/notebooks/posts/robustness/index.html</guid>
+  <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>State-Space Reconstruction</title>
   <link>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</link>
   <description><![CDATA[ 
@@ -97,11 +165,6 @@ Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &am
 Morgan, M. G., &amp; Keith, D. W. (2008). <span class="nocase">Improving the way we think about projecting future energy use and emissions of carbon dioxide</span>. <em>Clim. Change</em>, <em>90</em>, 189–215. <a href="https://doi.org/10.1007/s10584-008-9458-1">https://doi.org/10.1007/s10584-008-9458-1</a>
 </div></div><div class="page-columns page-full"><p>This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It’s also unlikely<sup>1</sup> that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst’s knowledge, but may also result in political differences emerging by working backwards from desired outcomes<sup>2</sup>. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this</p></li><li id="fn2"><p><sup>2</sup>&nbsp;This can happen anyway, but we can make it more transparent</p></li></div></div>
 </section>
-<section id="decision-making-deep-uncertainty-and-loss-functions" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="decision-making-deep-uncertainty-and-loss-functions">Decision-Making Deep Uncertainty and Loss Functions</h3>
-<div class="page-columns page-full"><p>Approaches like robustness and satisfycing are mostly fine: pick a solution that seems acceptable, and then stress-test it to make sure it performs adequately across scenarios<sup>3</sup>. Of course, this begs the question somewhat, as the robustness and satisfying scores will depend on how frequently poor-performing scenarios are sampled: is this an artifact of the implicit uniform distribution?<sup>4</sup> A good sensitivity analysis can diagnose this type of issue, but may not be refelcted in a robustness-maximizing approach.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;Picking the threshold is another issue…</p></li><li id="fn4"><p><sup>4</sup>&nbsp;The RCP example is instructive here: is RCP 8.5 20% of your samples?</p></li></div></div>
-<p>In other words, should robustness be a tool only for <em>post-facto</em> analysis? It may be inappropriate to use it as an exploratory decision criteria. This case probably reduces to a Bayes estimator with some loss function under the uniform assumption. It would be useful to know what that loss function looks like.</p>
-</section>
 </section>
 <section id="embracing-subjective-probabilities" class="level2">
 <h2 class="anchored" data-anchor-id="embracing-subjective-probabilities">Embracing Subjective Probabilities</h2>
@@ -110,10 +173,13 @@ Morgan, M. G., &amp; Keith, D. W. (2008). <span class="nocase">Improving the way
 <section id="things-i-need-to-think-about-more" class="level2">
 <h2 class="anchored" data-anchor-id="things-i-need-to-think-about-more">Things I Need To Think About More</h2>
 <ul>
-<li>What is the loss equivalent of robustness?</li>
 <li>How seriously should we take the epistemic-ethical implications of an analyst refusing to look at probabilities? When is it appropriate?</li>
 <li>Communicating uncertainties is hard. Is it worse when we’re up front about these being subjective?</li>
 </ul>
+</section>
+<section id="see-also" class="level2">
+<h2 class="anchored" data-anchor-id="see-also">See Also</h2>
+<p><a href="../robustness/">Robustness</a></p>
 </section>
 <section id="relevant-reading" class="level2">
 <h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
