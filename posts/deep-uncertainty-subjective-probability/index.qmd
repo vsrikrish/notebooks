@@ -15,21 +15,18 @@ As @Morgan2008-qg discuss, people impose probabilities when they're absent. The 
 
 This results in an epistemic hand-off from analyst to stakeholders, as stakeholders then have to impose their beliefs without guidance. It's also unlikely^[But not impossible; a lot of the advanced analytics that accompany frameworks like Multi-Objective Robust Decision Making get at this] that the analyst shows how different beliefs This may be appropriate in some cases, when the local domain knowledge is stronger than the analyst's knowledge, but may also result in political differences emerging by working backwards from desired outcomes^[This can happen anyway, but we can make it more transparent]. This may be worsened by the Ellsberg Paradox when stakeholders are faced with deep uncertainty.
 
-### Decision-Making Deep Uncertainty and Loss Functions
-
-Approaches like robustness and satisfycing are mostly fine: pick a solution that seems acceptable, and then stress-test it to make sure it performs adequately across scenarios^[Picking the threshold is another issue...]. Of course, this begs the question somewhat, as the robustness and satisfying scores will depend on how frequently poor-performing scenarios are sampled: is this an artifact of the implicit uniform distribution?^[The RCP example is instructive here: is RCP 8.5 20% of your samples?] A good sensitivity analysis can diagnose this type of issue, but may not be refelcted in a robustness-maximizing approach. 
-
-In other words, should robustness be a tool only for *post-facto* analysis? It may be inappropriate to use it as an exploratory decision criteria. This case probably reduces to a Bayes estimator with some loss function under the uniform assumption. It would be useful to know what that loss function looks like.
-
 ## Embracing Subjective Probabilities
 
 The alternative is to lean into subjectivity: based on the domain knowledge the expert has or has elicited, what probabilities would they assign and what does that mean about the decision space? Ideally, the analyst doesn't stop there and looks at how different assignments of probability influence the decision analysis. This would make both a forwards (probability -> outcome) and backwards (outcomes -> probability) process more transparent.
 
 ## Things I Need To Think About More
 
-- What is the loss equivalent of robustness?
 - How seriously should we take the epistemic-ethical implications of an analyst refusing to look at probabilities? When is it appropriate?
 - Communicating uncertainties is hard. Is it worse when we're up front about these being subjective?
+
+## See Also
+
+[Robustness](../robustness/) 
 
 ## Relevant Reading
 
