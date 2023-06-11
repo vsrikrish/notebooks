@@ -1,0 +1,17 @@
+---
+title: "Model Discrepancy"
+date: "2023-06-11"
+categories: [stats]
+date-modified: last-modified
+---
+
+Model discrepancy refers to systematic mismatches between model and data. This is conceptually different from observation error (which is typically assumed to be white noise), though both combine to produce the model residuals. When discrepancy is assumed to be normal, non-identifiability makes it challenging to separate from observation error, so these are usually lumped together, but this is usually a poor choice in environmental application.
+
+## Relevant Reading
+
+- Kennedy, M. C., & O’Hagan, A. (2001). Bayesian calibration of computer models. *Journal of the Royal Statistical Society. Series B, Statistical Methodology*, 63(3), 425–464. <https://doi.org/10.1111/1467-9868.00294>
+- Brynjarsdóttir, J., & OʼHagan, A. (2014). Learning about physical parameters: the importance of model discrepancy. *Inverse Problems*, 30(11), 114007. <https://doi.org/10.1088/0266-5611/30/11/114007>
+- Jiang, B., Wu, T.-Y., & Wong, W. H. (2018). Approximate Bayesian Computation with Kullback-Leibler Divergence as Data Discrepancy. In A. Storkey & F. Perez-Cruz (Eds.), *Proceedings of the Twenty-First International Conference on Artificial Intelligence and Statistics* (Vol. 84, pp. 1711–1721). Lanzarote, Spain: PMLR. Retrieved from <https://proceedings.mlr.press/v84/jiang18a.html>
+- Gardner, P., Rogers, T. J., Lord, C., & Barthorpe, R. J. (2019). Learning of model discrepancy for structural dynamics applications using Bayesian history matching. *Journal of Physics. Conference Series*, 1264(1), 012052. <https://doi.org/10.1088/1742-6596/1264/1/012052>
+
+
