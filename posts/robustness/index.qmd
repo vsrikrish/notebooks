@@ -12,9 +12,11 @@ Robustness is a vaguely defined term. There are really two different, though rel
 
 The former is the focus in this notebook, though the latter is often more interesting and difficult to quantify; often one has to link back to the original system and ensure that the model was adequate (not *valid*, as commonly used) and that the insights make sense [@Oreskes1994-br].
 
-## Decision Robustness
+Assessing the robustness of a decision is best done as a summary of a type of sensitivity: pick a solution that seems acceptable under some decision-making method, and then stress-test it to make sure it performs adequately across scenarios^[Picking the threshold for adequate peformance is another issue...]. 
 
-Assessing the robustness of a decision is best done as a summary of a type of sensitivity: pick a solution that seems acceptable under some decision-making method, and then stress-test it to make sure it performs adequately across scenarios^[Picking the threshold for adequate peformance is another issue...]. A rough way to think about satisfycing^[Some other robustness metrics don't lend themselves to this framework, and so may not have the same issues.] as some metrics have some In other words, assign a 0-1 loss over the tolerable domain $D \subset X$:
+## Satisfycing
+
+Satisfycing measures how often a particular performance threshold is reached across the range of states of the world. In other words, assign a 0-1 loss over the tolerable domain $D \subset X$:
 
 $$L(\mathbf{x}) = \begin{cases}0 & \mathbf{x} \in D \\ 1 & \mathbf{x} \notin D.\end{cases}$$
 
@@ -22,9 +24,22 @@ Then the satisfycing score is
 
 $$\int_X L(\mathbf{x}) p(x) dx = \int_D p(x) dx.$$
 
-This makes the score sensitive to the probability distribution $p$ and the tolerable domain $D$. As a result, even if the tolerable threshold is well-defined^[Which seems unlikely across stakeholders, but let's grant that for now...] this begs the question somewhat, as the robustness scores will depend on how frequently poorly-performing scenarios are sampled. A uniform distribution may be the worst option of all^[The principle of insufficient reason is only one way to express ignorance, and makes no sense for subjective probabilities [@Kass1996-ro].]. A good sensitivity analysis can diagnose this type of issue, but may not be reflected in a robustness-maximizing approach. @Quinn2020-cr shows that this notion of robustness is not itself robust to different scenario samples; this is related to fundamental issues with "Robust Bayes" [@Gelman2006-eh].
+### Sensitivity of Satisfycing Score to Probabilities
 
-For analyzing a single decision or a set of decisions, this approach is likely fine to understand the sensitivity of the decision to mis-parameterization. Things get worse when trying to use robustness as an objective for the decision analysis, particularly when probabilities are diffuse or ill-characterized, as obtaining the state(s) of the world used in the analysis is itself fraught and/or relies on subjective probabilities anyway: the resulting decision is itself likely highly sensitive to any number of decisions in the problem setup, and now we're back at the other kind of robustness.
+This makes the score sensitive to the probability distribution $p$ and the tolerable domain $D$. As a result, even if the tolerable threshold is well-defined^[Which seems unlikely across stakeholders, but let's grant that for now...] this begs the question somewhat, as the robustness scores will depend on how frequently poorly-performing scenarios are sampled. A uniform distribution may be the worst option of all^[The principle of insufficient reason is only one way to express ignorance, and makes no sense for subjective probabilities [@Kass1996-ro].]. A good sensitivity analysis can diagnose this type of issue, but may not be reflected in a satisfycing approach. @Quinn2020-cr shows that this notion of robustness is not itself robust to different scenario samples; this is related to fundamental issues with "Robust Bayes" [@Gelman2006-eh].
+
+For analyzing a single decision or a set of decisions, this approach is likely fine to understand the sensitivity of the decision's adequacy to mis-parameterization. Things get worse when trying to use robustness as an objective for the decision analysis, particularly when probabilities are diffuse or ill-characterized, as obtaining the state(s) of the world used in the analysis is itself fraught and/or relies on subjective probabilities anyway: the resulting decision is itself likely highly sensitive to any number of decisions in the problem setup, and now we're back at the other kind of robustness.
+
+### Model Discrepancy
+
+There's also another, maybe more fundamental issue: [model discrepancy](../model-discrepancy/). If your performance threshold is $\tau$ and the model prediction for a state of the world $s$ is $F(s)$, you want to know if $f(s) > \tau$. But if $F$ has a discrepancy $\zeta(s)$, you could mis-score $s$ if $\zeta$ moves you to the other side of $\tau$, with potentially important implications^[This isn't unique to the robustness setting, either: it applies to any model-based decision analysis with a 0-1 loss. For example, we should talk about this more in the context of pathways to zero emissions.]
+
+## Regret
+
+Regret is fine and reasonably sensible: it's a Bayesian score with a loss of the following type:
+
+$$L(\mathbf{x}) = \begin{cases}0 & if \mathbf{x} \in D \\ R(\| \mathbf{x} - \tau \|) & if \mathbf{x} \notin D,\end{cases}$$
+where $\| \cdot \|$ is some metric over outcomes. Nothing too interesting, and likely leads to more sensible rankings than satisfycing when they differ. I also think it's preferable for decision-making to losses which are more mathematical constructs than decision-relevant, like mean or logarithmic losses. For certain choices of $L$, this also helps smooth out the model discrepancy issue, since you can make the loss within some neighborhood of the boundary of $D$ positive as a buffer and adjust $R$ to smooth the transition from $D$ to a high-regret region. It might be interesting to explore this in a quick paper, maybe for the shallow lake problem or coastal flood risk.
 
 ## See Also
 
