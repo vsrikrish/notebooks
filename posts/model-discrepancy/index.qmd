@@ -2,7 +2,7 @@
 title: "Model Discrepancy"
 date: "2023-06-11"
 categories: [stats]
-date-modified: last-modified
+date-modified: "2023-06-11"
 ---
 
 Model discrepancy refers to systematic mismatches between model and data. This is conceptually different from observation error (which is typically assumed to be white noise), though both combine to produce the model residuals. When discrepancy is assumed to be normal, non-identifiability makes it challenging to separate from observation error, so these are usually lumped together, but this is usually a poor choice in environmental application.

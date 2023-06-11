@@ -2,7 +2,7 @@
 title: "Robustness"
 date: "2023-06-10"
 categories: [uncertainty, decision-making]
-date-modified: last-modified
+date-modified: "2023-06-11"
 ---
 
 Robustness is a vaguely defined term. There are really two different, though related, types of robustness, as the term is commonly used:

@@ -2,7 +2,7 @@
 title: "State-Space Reconstruction"
 date: "2023-06-10"
 categories: [math, stats]
-date-modified: last-modified
+date-modified: "2023-06-10"
 ---
 
 Given a time series that we assume came from a dynamical system, can we reconstruct the state space of the system from the observations? This is complicated by a few features of chaotic or noisy systems.

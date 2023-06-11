@@ -1,7 +1,7 @@
 ---
 listing:
   contents: posts
-  sort: "title"
+  sort: "file-modified"
   type: table
   categories: true
   sort-ui: true
