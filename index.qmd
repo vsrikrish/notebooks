@@ -1,12 +1,12 @@
 ---
 listing:
   contents: posts
-  sort: "file-modified"
+  sort: "date-modified desc"
   type: table
   categories: true
   sort-ui: true
   filter-ui: true
-  fields: [title, date, file-modified]
+  fields: [title, date, date-modified]
   feed: true
   date-format: short
 page-layout: full
