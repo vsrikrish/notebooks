@@ -1,0 +1,77 @@
+---
+title: "Agent-Based Models"
+date: "2023-06-13"
+categories: [modeling]
+date-modified: "2023-06-13"
+---
+
+Agent-based models are useful for simulating heterogeneous agents which interact with each other, particularly under nonequilibrium conditions^[This notebook will not focus on particular applications --- there are a lot of them, but I'm more interested in the underlying methods and what they mean for interpretation of ABM results.].
+
+But..
+
+- They are notoriously difficult to calibrate statistically^[Which is important given [model discrepancy](../model-discrepancy/) and the features that make ABMs interesting, like path dependence...], and so, particularly in environmental applications, are often not calibrated or the calibration is done so poorly that it may as well not have been done at all (a topic that I am very interested in, so that gets [its own notebook](../abm-calibration/)). This also means they are rarely validated in a way which doesn't trivially follow from the "calibration," and yet they are used to breathlessly make projections. Weird.
+- They are easy to overstuff with whatever state information variables one wants (this ties to calibration, of course). 
+- To me, this raises of the question of how often ABMs are designed to be "compatible" with some data, rather than starting from theory and finding appropriate data. This is fundamentally backwards.
+- Sometimes people use ML approaches instead of parametric utility functions. That's fine for prediction, I suppose, but overfitting worries me, and it's hard then to compare models, and structural uncertainty is a beast [@Yoon2023-sp].
+
+For the purposes of generative social science, I think these are more useful for exploratory analyses than consolidative modeling [@Bankes1993-lj], but that requires careful accounting of both parametric and structural uncertainty^[Particularly as both equifinality and multifinality come up frequently.]. That being said, I am interested in quite a few questions related to ABMs --- not just calibration and inference, but broader questions about structural uncertainty, diagnosing and understanding the implications of equi- and multifinality^[I don't like these terms, but they are succint.], and uncertainty propagation.
+
+## Relevant Reading
+
+### Overviews
+
+- Epstein, J. M. (1999). Agent-based computational models and generative social science. *Complexity*, 4(5), 41–60. <https://doi.org/10.1002/(SICI)1099-0526(199905/06)4:5<41::AID-CPLX9>3.0.CO;2-F>
+- Macy, M. W., & Willer, R. (2002). From factors to actors: Computational sociology and agent-based modeling. *Annual Review of Sociology*, 28(1), 143–166. <https://doi.org/10.1146/annurev.soc.28.110601.141117>
+- Shalizi, C. R. (2003, July 9). Methods and techniques of complex systems science: An overview. arXiv [nlin.AO]. Retrieved from <http://arxiv.org/abs/nlin/0307015>
+- Farmer, J. D., & Foley, D. (2009). The economy needs agent-based modelling. *Nature*, 460(7256), 685–686. <https://doi.org/10.1038/460685a>
+- Lempert, R. (2002). Agent-based modeling as organizational and public policy simulators. *Proceedings of the National Academy of Sciences of the United States of America*, 99 Suppl 3(Supplement 3), 7195–7196. <https://doi.org/10.1073/pnas.072079399>
+- Macal, C. M. (2016). Everything you need to know about agent-based modelling and simulation. *Journal of Simulation*, 10(2), 144–156. <https://doi.org/10.1057/jos.2016.7>
+- Heard, D., Dent, G., Schifeling, T., & Banks, D. (2015). Agent-Based Models and Microsimulation. *Annual Review of Statistics and Its Application*, 2(1), 259–272. <https://doi.org/10.1146/annurev-statistics-010814-020218>
+- Janssen, M. A., & Ostrom, E. (2006). Empirically based, agent-based models. *Ecology and Society*, 11(2), art37. <https://doi.org/10.5751/ES-01861-110237>
+- Adami, C., Schossau, J., & Hintze, A. (2014, April 3). Evolutionary game theory using agent-based methods. arXiv [q-bio.PE]. Retrieved from <http://arxiv.org/abs/1404.0994>
+
+
+
+
+
+
+### Philosophical Foundations
+
+- Leombruni, R., & Richiardi, M. (2005). Why are economists sceptical about agent-based simulations? *Physica A*, 355(1), 103–109. <https://doi.org/10.1016/j.physa.2005.02.072>
+- Lehtinen, A., & Kuorikoski, J. (2007). Computing the perfect model: Why do economists shun simulation? *Philosophy of Science*, 74(3), 304–329. <https://doi.org/10.1086/522359>
+- Grüne-Yanoff, T. (2009). The explanatory potential of artificial societies. *Synthese*, 169(3), 539–555. <https://doi.org/10.1007/s11229-008-9429-0>
+- Marchionni, C., & Ylikoski, P. (2013). *Generative explanation and individualism in agent-based simulation*. Philosophy of the Social Sciences, 43(3), 323–340. <https://doi.org/10.1177/0048393113488873>
+- Ylikoski, P. (2014). Agent-based simulation and sociological understanding. *Perspectives on Science: Historical, Philosophical, Social*, 22(3), 318–335. <https://doi.org/10.1162/posc_a_00136>
+
+
+### Challenges
+
+- Crooks, A., Castle, C., & Batty, M. (2008). Key challenges in agent-based modelling for geo-spatial simulation. *Computers, Environment and Urban Systems*, 32(6), 417–430. <https://doi.org/10.1016/j.compenvurbsys.2008.09.004>
+- Filatova, T., Verburg, P. H., Parker, D. C., & Stannard, C. A. (2013). Spatial agent-based models for socio-ecological systems: challenges and prospects. *Environmental Modelling & Software*, 45, 1–7. <https://doi.org/10.1016/j.envsoft.2013.03.017>
+- Lee, J.-S., Filatova, T., Ligmann-Zielinska, A., Hassani-Mahmooei, B., Stonedahl, F., Lorscheid, I., et al. (2015). The complexities of agent-based modeling output analysis. *Journal of Artificial Societies and Social Simulation: JASSS*, 18(4), 4. <https://doi.org/10.18564/jasss.2897>
+- Kieu, L.-M., Malleson, N., & Heppenstall, A. (2020). Dealing with uncertainty in agent-based models for short-term predictions. *Royal Society Open Science*, 7(1), 191074. <https://doi.org/10.1098/rsos.191074>
+- Boero, R., & Squazzoni, Flaminio. (2005). Does Empirical Embeddedness Matter? Methodological Issues on Agent-Based Models for Analytical Social Science. *Journal of Artificial Societies and Social Simulation*, 8(4), 6. Retrieved from <http://jasss.soc.surrey.ac.uk/8/4/6.html>
+- O’Sullivan, D., Evans, T., Manson, S., Metcalf, S., Ligmann-Zielinska, A., & Bone, C. (2016). Strategic directions for agent-based modeling: avoiding the YAAWN syndrome. *Journal of Land Use Science*, 11(2), 177–187. <https://doi.org/10.1080/1747423X.2015.1030463>
+- Yoon, J., Wan, H., Daniel, B., Srikrishnan, V., & Judi, D. (2023). Structural model choices regularly overshadow parametric uncertainty in agent-based simulations of household flood risk outcomes. *Computers, Environment and Urban Systems*, 103, 101979. <https://doi.org/10.1016/j.compenvurbsys.2023.101979>
+
+
+### Methods
+
+- Banisch, S., Lima, R., & Araújo, T. (2011, August 8). *Agent based models and opinion dynamics as Markov chains*. arXiv [nlin.AO]. Retrieved from <http://arxiv.org/abs/1108.1716>
+- Valogianni, K., & Padmanabhan, B. (2022). Causal ABMs: Learning Plausible Causal Models using Agent-based Modeling. In The *KDD’22 Workshop on Causal Discovery* (pp. 3–29). PMLR. Retrieved from <https://proceedings.mlr.press/v185/valogianni22a.html>
+- Grimm, V. (2005). Pattern-oriented modeling of agent-based complex systems: lessons from ecology. Science, 310(5750), 987–991. https://doi.org/10.1126/science.1116681
+- Wilensky, U., & Rand, W. (2007). Making models match: Replicating an agent-based model. *Journal of Artificial Societies and Social Simulation*, 10(4), 2. Retrieved from <http://jasss.soc.surrey.ac.uk/10/4/2.html>
+- Anzola, D. (2021). The Theory-Practice Gap in the Evaluation of Agent-Based Social Simulations. *Science in Context*, 34(3), 393–410. <https://doi.org/10.1017/S0269889722000242>
+- Băbeanu, A.-I., Filatova, T., Kwakkel, J. H., & Yorke-Smith, N. (2023, April 4). Adaptive parallelization of multi-agent simulations with localized dynamics. arXiv [cs.DC]. Retrieved from <http://arxiv.org/abs/2304.01724>
+- Bao, L., & Fritchman, J. C. (2018). Information of complex systems and applications in agent based modeling. *Scientific Reports*, 8(1), 6177. <https://doi.org/10.1038/s41598-018-24570-1>
+- Borgonovo, E., Pangallo, M., Rivkin, J., Rizzo, L., & Siggelkow, N. (2022). Sensitivity analysis of agent-based models: a new protocol. *Computational & Mathematical Organization Theory*, 28(1), 52–94. <https://doi.org/10.1007/s10588-021-09358-5>
+- Will, M., Groeneveld, J., Frank, K., & Müller, B. (2020). Combining social network analysis and agent-based modelling to explore dynamics of human interaction: A review. *Socio-Environmental Systems Modelling*, 2, 16325. <https://doi.org/10.18174/sesmo.2020a16325>
+- Brown, D. G., Page, S., Riolo, R., Zellner, M., & Rand, W. (2005). Path dependence and the validation of agent‐based spatial models of land use. *International Journal of Geographical Information Science: IJGIS*, 19(2), 153–174. <https://doi.org/10.1080/13658810410001713399>
+- Groeneveld, J., Müller, B., Buchmann, C. M., Dressler, G., Guo, C., Hase, N., et al. (2017). Theoretical foundations of human decision-making in agent-based land use models – A review. *Environmental Modelling & Software*, 87, 39–48. <https://doi.org/10.1016/j.envsoft.2016.10.008>
+- Thiem, T. N., Kemeth, F. P., Bertalan, T., Laing, C. R., & Kevrekidis, I. G. (2021). Global and local reduced models for interacting, heterogeneous agents. *Chaos*, 31, 073139. <https://doi.org/10.1063/5.0055840>
+
+
+
+
+
+
