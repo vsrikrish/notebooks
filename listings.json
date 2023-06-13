@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/agent-based-modeling/index.html",
       "/posts/robustness/index.html",
       "/posts/model-discrepancy/index.html",
       "/posts/state-space-reconstruction/index.html",
