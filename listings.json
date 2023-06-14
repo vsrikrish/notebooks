@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/information-geometry/index.html",
       "/posts/agent-based-modeling/index.html",
       "/posts/robustness/index.html",
       "/posts/model-discrepancy/index.html",

@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://viveks.me/notebooks/posts/robustness/index.html</loc>
-    <lastmod>2023-06-13T11:18:36.624Z</lastmod>
+    <lastmod>2023-06-14T12:25:43.018Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</loc>
-    <lastmod>2023-06-13T11:18:37.736Z</lastmod>
+    <lastmod>2023-06-14T12:25:44.230Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/agent-based-modeling/index.html</loc>
-    <lastmod>2023-06-13T11:18:38.628Z</lastmod>
+    <lastmod>2023-06-14T12:25:45.126Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
-    <lastmod>2023-06-13T11:18:39.156Z</lastmod>
+    <lastmod>2023-06-14T12:25:45.658Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/model-discrepancy/index.html</loc>
-    <lastmod>2023-06-13T11:18:39.577Z</lastmod>
+    <lastmod>2023-06-14T12:25:46.106Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/information-geometry/index.html</loc>
+    <lastmod>2023-06-14T12:25:46.702Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/index.html</loc>
-    <lastmod>2023-06-13T11:18:40.081Z</lastmod>
+    <lastmod>2023-06-14T12:25:47.274Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/about.html</loc>
-    <lastmod>2023-06-13T11:18:40.473Z</lastmod>
+    <lastmod>2023-06-14T12:25:47.678Z</lastmod>
   </url>
 </urlset>

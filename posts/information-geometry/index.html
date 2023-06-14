@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-06-14">
 
-<title>Notebooks</title>
+<title>Notebooks - Information Geometry</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +21,44 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,50 +79,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-date-modified',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Notebooks" href="index.xml"></head>
-
-<body class="floating nav-fixed">
+<body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Notebooks</span>
     </a>
   </div>
@@ -115,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About These Notes</span></a>
   </li>  
   <li class="nav-item compact">
@@ -129,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -141,134 +128,106 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#relevant-readings" id="toc-relevant-readings" class="nav-link active" data-scroll-target="#relevant-readings">Relevant Readings</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#fisher-information" id="toc-fisher-information" class="nav-link" data-scroll-target="#fisher-information">Fisher Information</a></li>
+  <li><a href="#model-selection" id="toc-model-selection" class="nav-link" data-scroll-target="#model-selection">Model Selection</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="decision-making">decision-making <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ethics">ethics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="math">math <span class="quarto-category-count">(1)</span></div><div class="category" data-category="modeling">modeling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stats">stats <span class="quarto-category-count">(3)</span></div><div class="category" data-category="uncertainty">uncertainty <span class="quarto-category-count">(2)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
     </div>
-</div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-Modified
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="stats" data-listing-date-sort="1686700800000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686700800000" data-listing-reading-time-sort="3" data-listing-title-sort="Information Geometry" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/information-geometry/index.html" class="title listing-title">Information Geometry</a>
-</td>
-<td>
-<span class="listing-date">6/14/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/14/23</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="modeling" data-listing-date-sort="1686614400000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686614400000" data-listing-reading-time-sort="6" data-listing-title-sort="Agent-Based Models" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/agent-based-modeling/index.html" class="title listing-title">Agent-Based Models</a>
-</td>
-<td>
-<span class="listing-date">6/13/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/13/23</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="uncertainty,decision-making" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686441600000" data-listing-reading-time-sort="5" data-listing-title-sort="Robustness" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/robustness/index.html" class="title listing-title">Robustness</a>
-</td>
-<td>
-<span class="listing-date">6/10/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/11/23</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="stats" data-listing-date-sort="1686441600000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686441600000" data-listing-reading-time-sort="1" data-listing-title-sort="Model Discrepancy" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/model-discrepancy/index.html" class="title listing-title">Model Discrepancy</a>
-</td>
-<td>
-<span class="listing-date">6/11/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/11/23</span>
-</td>
-</tr>
-<tr data-index="4" data-categories="math,stats" data-listing-date-sort="1686355200000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686355200000" data-listing-reading-time-sort="5" data-listing-title-sort="State-Space Reconstruction" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/state-space-reconstruction/index.html" class="title listing-title">State-Space Reconstruction</a>
-</td>
-<td>
-<span class="listing-date">6/10/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/10/23</span>
-</td>
-</tr>
-<tr data-index="5" data-categories="uncertainty,decision-making,ethics" data-listing-date-sort="1686268800000" data-listing-file-modified-sort="1686745524974" data-listing-date-modified-sort="1686355200000" data-listing-reading-time-sort="3" data-listing-title-sort="Deep Uncertainty and Subjective Probabilities" data-listing-filename-sort="index.qmd">
-<td>
-<a href="./posts/deep-uncertainty-subjective-probability/index.html" class="title listing-title">Deep Uncertainty and Subjective Probabilities</a>
-</td>
-<td>
-<span class="listing-date">6/9/23</span>
-</td>
-<td>
-<span class="listing-date-modified">6/10/23</span>
-</td>
-</tr>
-</tbody>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Information Geometry</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">stats</div>
+  </div>
+  </div>
 
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 14, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 14, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p><strong>This is a placeholder as I read more.</strong></p>
+<div class="page-columns page-full"><p>Applications of differential geometry to statistics, using Kullback-Leibler divergence as a pseudo-metric<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and Fisher information as curvature. This lets use some powerful results about manifolds and to think about coordinate-free statistics. I think this could also be useful in analyzing high-dimensional simulation model output, because the outputs aren’t actually independent, and looking at the manifold associated with a particular distribution of outputs could result in some dimension reduction without linearization.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;K-L divergence isn’t symmetric, so it isn’t a metric.</p></li></div></div>
+<p>I’m interested in:</p>
+<ul>
+<li>Model selection via information geometry (such as methods like the various Watanabe-<em>x</em> information criteria).</li>
+<li>Scenario discovery by looking at the “shapes” of ensembles of model runs corresponding to different states of the world (but allowing for stochastic forcings). The rough idea is that this corresponds more directly with the XLRM framing of a decision problem <span class="citation" data-cites="Lempert2003-va">(<a href="#ref-Lempert2003-va" role="doc-biblioref">Lempert et al., 2003</a>)</span>: look at the sub-ensembles corresponding to particular levers (“L”), which are the things you can control, and/or some of the uncertainties (“X”) that are observable or predictable, and look at how the resulting distributions differ. Then we can identify representative scenarios which have anomalous or interesting distributions.</li>
+<li>Network embeddings: multi-sector systems can be thought of as very complex networks, and being able to embed the network dynamics into some latent space might be useful.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-Lempert2003-va" class="csl-entry" role="listitem">
+Lempert, R. J., Popper, S. W., &amp; Bankes, S. C. (2003). <em>Shaping the next one hundred years: New methods for quantitative, long-term policy analysis</em>. Santa Monica, CA: RAND.
+</div></div><section id="relevant-readings" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-readings">Relevant Readings</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<ul>
+<li>Amari, S.-I., Barndorff-Nielsen, O. E., Kass, R. E., Lauritzen, S. L., &amp; Rao, C. R. (1987). <em>Differential geometry in statistical inference</em>. Institute of Mathematical Statistics. Retrieved from <a href="https://projecteuclid.org/ebooks/institute-of-mathematical-statistics-lecture-notes-monograph-series/Differential-geometry-in-statistical-inference/toc/10.1214/lnms/1215467056" class="uri">https://projecteuclid.org/ebooks/institute-of-mathematical-statistics-lecture-notes-monograph-series/Differential-geometry-in-statistical-inference/toc/10.1214/lnms/1215467056</a></li>
+<li>Toussaint, M. (2004, August 20). Notes on information geometry and evolutionary processes. arXiv [nlin.AO]. Retrieved from <a href="http://arxiv.org/abs/nlin/0408040" class="uri">http://arxiv.org/abs/nlin/0408040</a></li>
+<li>Ay, N., Jost, J., Lê, H. V., &amp; Schwachhöfer, L. (2012, July 28). Information geometry and sufficient statistics. arXiv [math.ST]. <a href="https://doi.org/10.1007/s00440-014-0574-8" class="uri">https://doi.org/10.1007/s00440-014-0574-8</a></li>
+<li>Dodson, C. T. J., &amp; Wang, H. (2001). Iterative Approximation of Statistical Distributions and Relation to Information Geometry. <em>Statistical Inference for Stochastic Processes</em>, 4(3), 307–318. <a href="https://doi.org/10.1023/a:1012289028897" class="uri">https://doi.org/10.1023/a:1012289028897</a></li>
+<li>Ollivier, Y., Arnold, L., Auger, A., &amp; Hansen, N. (2017). Information-Geometric Optimization Algorithms: A Unifying Picture via Invariance Principles. <em>Journal of Machine Learning Research: JMLR</em>, 18(18), 1–65. <a href="https://doi.org/10.1145/1569901.1569976" class="uri">https://doi.org/10.1145/1569901.1569976</a></li>
+<li>Amari, S.-I. (2001). Information geometry on hierarchy of probability distributions. <em>IEEE Transactions on Information Theory</em>, 47(5), 1701–1711. <a href="https://doi.org/10.1109/18.930911" class="uri">https://doi.org/10.1109/18.930911</a></li>
+</ul>
+</section>
+<section id="fisher-information" class="level3">
+<h3 class="anchored" data-anchor-id="fisher-information">Fisher Information</h3>
+<ul>
+<li>Calmet, X., &amp; Calmet, J. (2005). Dynamics of the Fisher information metric. <em>Physical Review. E, Statistical, Nonlinear, and Soft Matter Physics</em>, 71(5 Pt 2), 056109. <a href="https://doi.org/10.1103/PhysRevE.71.056109" class="uri">https://doi.org/10.1103/PhysRevE.71.056109</a></li>
+<li>Carter, K. M., Raich, R., Finn, W. G., &amp; Hero, A. O. (2008, February 14). <em>FINE: Fisher Information Non-parametric Embedding</em>. arXiv [stat.ML]. Retrieved from <a href="http://arxiv.org/abs/0802.2050" class="uri">http://arxiv.org/abs/0802.2050</a></li>
+</ul>
+</section>
+<section id="model-selection" class="level3">
+<h3 class="anchored" data-anchor-id="model-selection">Model Selection</h3>
+<ul>
+<li>Myung, I. J., Balasubramanian, V., &amp; Pitt, M. A. (2000). Counting probability distributions: differential geometry and model selection. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 97(21), 11170–11175. <a href="https://doi.org/10.1073/pnas.170283897" class="uri">https://doi.org/10.1073/pnas.170283897</a></li>
+<li>Watanabe, S. (2010). Asymptotic equivalence of Bayes cross validation and widely applicable information criterion in singular learning theory. <em>Journal of Machine Learning Research: JMLR</em>, 11, 3571–3594. Retrieved from <a href="http://arxiv.org/abs/1004.2316" class="uri">http://arxiv.org/abs/1004.2316</a></li>
+<li>Watanabe, S. (2011). <em>Algebraic Geometry and Statistical Learning Theory</em>. Cambridge University Press.</li>
+</ul>
+
+
+
+</section>
+</section>
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

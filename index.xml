@@ -10,7 +10,63 @@
 <atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Tue, 13 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 14 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Information Geometry</title>
+  <link>https://viveks.me/notebooks/posts/information-geometry/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p><strong>This is a placeholder as I read more.</strong></p>
+<div class="page-columns page-full"><p>Applications of differential geometry to statistics, using Kullback-Leibler divergence as a pseudo-metric<sup>1</sup> and Fisher information as curvature. This lets use some powerful results about manifolds and to think about coordinate-free statistics. I think this could also be useful in analyzing high-dimensional simulation model output, because the outputs aren’t actually independent, and looking at the manifold associated with a particular distribution of outputs could result in some dimension reduction without linearization.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;K-L divergence isn’t symmetric, so it isn’t a metric.</p></li></div></div>
+<p>I’m interested in:</p>
+<ul>
+<li>Model selection via information geometry (such as methods like the various Watanabe-<em>x</em> information criteria).</li>
+<li>Scenario discovery by looking at the “shapes” of ensembles of model runs corresponding to different states of the world (but allowing for stochastic forcings). The rough idea is that this corresponds more directly with the XLRM framing of a decision problem <span class="citation" data-cites="Lempert2003-va">(Lempert et al., 2003)</span>: look at the sub-ensembles corresponding to particular levers (“L”), which are the things you can control, and/or some of the uncertainties (“X”) that are observable or predictable, and look at how the resulting distributions differ. Then we can identify representative scenarios which have anomalous or interesting distributions.</li>
+<li>Network embeddings: multi-sector systems can be thought of as very complex networks, and being able to embed the network dynamics into some latent space might be useful.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-Lempert2003-va" class="csl-entry">
+Lempert, R. J., Popper, S. W., &amp; Bankes, S. C. (2003). <em>Shaping the next one hundred years: New methods for quantitative, long-term policy analysis</em>. Santa Monica, CA: RAND.
+</div></div><section id="relevant-readings" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-readings">Relevant Readings</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<ul>
+<li>Amari, S.-I., Barndorff-Nielsen, O. E., Kass, R. E., Lauritzen, S. L., &amp; Rao, C. R. (1987). <em>Differential geometry in statistical inference</em>. Institute of Mathematical Statistics. Retrieved from <a href="https://projecteuclid.org/ebooks/institute-of-mathematical-statistics-lecture-notes-monograph-series/Differential-geometry-in-statistical-inference/toc/10.1214/lnms/1215467056" class="uri">https://projecteuclid.org/ebooks/institute-of-mathematical-statistics-lecture-notes-monograph-series/Differential-geometry-in-statistical-inference/toc/10.1214/lnms/1215467056</a></li>
+<li>Toussaint, M. (2004, August 20). Notes on information geometry and evolutionary processes. arXiv [nlin.AO]. Retrieved from <a href="http://arxiv.org/abs/nlin/0408040" class="uri">http://arxiv.org/abs/nlin/0408040</a></li>
+<li>Ay, N., Jost, J., Lê, H. V., &amp; Schwachhöfer, L. (2012, July 28). Information geometry and sufficient statistics. arXiv [math.ST]. <a href="https://doi.org/10.1007/s00440-014-0574-8" class="uri">https://doi.org/10.1007/s00440-014-0574-8</a></li>
+<li>Dodson, C. T. J., &amp; Wang, H. (2001). Iterative Approximation of Statistical Distributions and Relation to Information Geometry. <em>Statistical Inference for Stochastic Processes</em>, 4(3), 307–318. <a href="https://doi.org/10.1023/a:1012289028897" class="uri">https://doi.org/10.1023/a:1012289028897</a></li>
+<li>Ollivier, Y., Arnold, L., Auger, A., &amp; Hansen, N. (2017). Information-Geometric Optimization Algorithms: A Unifying Picture via Invariance Principles. <em>Journal of Machine Learning Research: JMLR</em>, 18(18), 1–65. <a href="https://doi.org/10.1145/1569901.1569976" class="uri">https://doi.org/10.1145/1569901.1569976</a></li>
+<li>Amari, S.-I. (2001). Information geometry on hierarchy of probability distributions. <em>IEEE Transactions on Information Theory</em>, 47(5), 1701–1711. <a href="https://doi.org/10.1109/18.930911" class="uri">https://doi.org/10.1109/18.930911</a></li>
+</ul>
+</section>
+<section id="fisher-information" class="level3">
+<h3 class="anchored" data-anchor-id="fisher-information">Fisher Information</h3>
+<ul>
+<li>Calmet, X., &amp; Calmet, J. (2005). Dynamics of the Fisher information metric. <em>Physical Review. E, Statistical, Nonlinear, and Soft Matter Physics</em>, 71(5 Pt 2), 056109. <a href="https://doi.org/10.1103/PhysRevE.71.056109" class="uri">https://doi.org/10.1103/PhysRevE.71.056109</a></li>
+<li>Carter, K. M., Raich, R., Finn, W. G., &amp; Hero, A. O. (2008, February 14). <em>FINE: Fisher Information Non-parametric Embedding</em>. arXiv [stat.ML]. Retrieved from <a href="http://arxiv.org/abs/0802.2050" class="uri">http://arxiv.org/abs/0802.2050</a></li>
+</ul>
+</section>
+<section id="model-selection" class="level3">
+<h3 class="anchored" data-anchor-id="model-selection">Model Selection</h3>
+<ul>
+<li>Myung, I. J., Balasubramanian, V., &amp; Pitt, M. A. (2000). Counting probability distributions: differential geometry and model selection. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 97(21), 11170–11175. <a href="https://doi.org/10.1073/pnas.170283897" class="uri">https://doi.org/10.1073/pnas.170283897</a></li>
+<li>Watanabe, S. (2010). Asymptotic equivalence of Bayes cross validation and widely applicable information criterion in singular learning theory. <em>Journal of Machine Learning Research: JMLR</em>, 11, 3571–3594. Retrieved from <a href="http://arxiv.org/abs/1004.2316" class="uri">http://arxiv.org/abs/1004.2316</a></li>
+<li>Watanabe, S. (2011). <em>Algebraic Geometry and Statistical Learning Theory</em>. Cambridge University Press.</li>
+</ul>
+
+
+
+</section>
+</section>
+
+
+ ]]></description>
+  <category>stats</category>
+  <guid>https://viveks.me/notebooks/posts/information-geometry/index.html</guid>
+  <pubDate>Wed, 14 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Agent-Based Models</title>
   <link>https://viveks.me/notebooks/posts/agent-based-modeling/index.html</link>
