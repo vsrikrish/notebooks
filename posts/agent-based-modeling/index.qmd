@@ -2,7 +2,7 @@
 title: "Agent-Based Models"
 date: "2023-06-13"
 categories: [modeling]
-date-modified: "2023-06-13"
+date-modified: "2023-06-15"
 ---
 
 Agent-based models are useful for simulating heterogeneous agents which interact with each other, particularly under nonequilibrium conditions^[This notebook will not focus on particular applications --- there are a lot of them, but I'm more interested in the underlying methods and what they mean for interpretation of ABM results.].
@@ -69,8 +69,7 @@ For the purposes of generative social science, I think these are more useful for
 - Brown, D. G., Page, S., Riolo, R., Zellner, M., & Rand, W. (2005). Path dependence and the validation of agent‐based spatial models of land use. *International Journal of Geographical Information Science: IJGIS*, 19(2), 153–174. <https://doi.org/10.1080/13658810410001713399>
 - Groeneveld, J., Müller, B., Buchmann, C. M., Dressler, G., Guo, C., Hase, N., et al. (2017). Theoretical foundations of human decision-making in agent-based land use models – A review. *Environmental Modelling & Software*, 87, 39–48. <https://doi.org/10.1016/j.envsoft.2016.10.008>
 - Thiem, T. N., Kemeth, F. P., Bertalan, T., Laing, C. R., & Kevrekidis, I. G. (2021). Global and local reduced models for interacting, heterogeneous agents. *Chaos*, 31, 073139. <https://doi.org/10.1063/5.0055840>
-
-
+- Hooten, M. B., & Wikle, C. K. (2010). Statistical agent-based models for discrete spatio-temporal systems. *Journal of the American Statistical Association*, 105(489), 236–248. <https://doi.org/10.1198/jasa.2009.tm09036>
 
 
 
