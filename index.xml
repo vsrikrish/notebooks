@@ -240,6 +240,76 @@ Bankes, S. (1993). <span class="nocase">Exploratory modeling for policy analysis
   <pubDate>Sun, 11 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>State-Space Reconstruction</title>
+  <link>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>Given a time series that we assume came from a dynamical system, can we reconstruct the state space of the system from the observations? This is complicated by a few features of chaotic or noisy systems.</p>
+<section id="setup-and-theorem" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="setup-and-theorem">Setup and Theorem</h2>
+<div class="page-columns page-full"><p>Suppose we have a <em>deterministic</em> dynamical system with state <img src="https://latex.codecogs.com/png.latex?z(t)"> on a smooth manifold of dimension <img src="https://latex.codecogs.com/png.latex?m">. Our observations are <img src="https://latex.codecogs.com/png.latex?x(t)%20=%20g(z(t))"><sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;often <img src="https://latex.codecogs.com/png.latex?g(y)%20=%20y%20+%20%5Cvarepsilon_t">, where <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon_t"> is some noise process, but this can be more complex.</p></li></div></div>
+<p>For a time horizon <img src="https://latex.codecogs.com/png.latex?%5Ctau%20%3C%20%5Cinfty"> and a positive integer <img src="https://latex.codecogs.com/png.latex?k">, set <img src="https://latex.codecogs.com/png.latex?s(t)%20=%20(x(t),%20x(t%20-%20%5Ctau),%20x(t%20-%202%5Ctau),%20%5Cldots,%20x(t%20-%20(k-1)%20%5Ctau))."> It turns out <span class="citation" data-cites="Takens1981-gq">(Takens., 1981)</span> that if <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%202m+1">, then <img src="https://latex.codecogs.com/png.latex?z(t)%20=%20%5Cphi(s(t))"> for some diffeomorphism <img src="https://latex.codecogs.com/png.latex?%5Cphi">.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Takens1981-gq" class="csl-entry">
+Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbulence</span>. In D. A. Rand &amp; L. S. Young (Eds.), <em><span class="nocase"><em>Symposium on Dynamical Systems and Turbulence (</em>Springer Lecture Notes in Mathematics vol. 898)</span></em> (pp. 366–381). Berlin, Germany: Springer. Retrieved from <a href="https://www.crcv.ucf.edu/gauss/info/Takens.pdf">https://www.crcv.ucf.edu/gauss/info/Takens.pdf</a>
+</div></div><div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<sup>2</sup> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<sup>3</sup>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (2015)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li><div id="ref-Van_Nes2015-ua" class="csl-entry">
+Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &amp; Sugihara, G. (2015). Causal feedbacks in climate change. <em>Nat. Clim. Chang.</em>, <em>5</em>(5), 445–448. <a href="https://doi.org/10.1038/nclimate2568">https://doi.org/10.1038/nclimate2568</a>
+</div></div></div>
+</section>
+<section id="main-interest" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="main-interest">Main Interest</h2>
+<div class="page-columns page-full"><p>My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections or track the propagation of shocks<sup>4</sup>. The complications in making this tractable are stochasticity<sup>5</sup> and dimensionality<sup>6</sup>, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;“George Box has [almost] said”The only way to find out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively.” These words of caution about “natural experiments” are uncomfortably strong. Yet in today’s world we see no alternative to accepting them as, if anything, too weak.” - Mosteller &amp; Tukey (1977)</p></li><li id="fn5"><p><sup>5</sup>&nbsp;We would need to reconstruct a Markov process</p></li><li id="fn6"><p><sup>6</sup>&nbsp;Finding the relevant DAG is expensive.</p></li></div></div>
+</section>
+<section id="things-i-need-to-think-about-more" class="level2">
+<h2 class="anchored" data-anchor-id="things-i-need-to-think-about-more">Things I Need To Think About More</h2>
+<ul>
+<li>Methods for reconstructing networks from potentially noisy simulations</li>
+<li>Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?</li>
+</ul>
+</section>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<section id="reconstruction" class="level3">
+<h3 class="anchored" data-anchor-id="reconstruction">Reconstruction</h3>
+<ul>
+<li>Takens., F. (1981). Detecting strange attractors in turbulence. In D. A. Rand &amp; L. S. Young (Eds.), <em>Symposium on Dynamical Systems and Turbulence</em> (Springer Lecture Notes in Mathematics vol.&nbsp;898) (pp.&nbsp;366–381). Berlin, Germany: Springer.</li>
+<li>Stark, J., Broomhead, D. S., Davies, M. E., &amp; Huke, J. (1997). Takens embedding theorems for forced and stochastic systems. <em>Nonlinear Analysis, Theory, Methods &amp; Applications</em>, 30(8), 5303–5314. <a href="https://doi.org/10.1016/S0362-546X(96)00149-6" class="uri">https://doi.org/10.1016/S0362-546X(96)00149-6</a></li>
+<li>Robinson, J. C. (2005). A topological delay embedding theorem for infinite-dimensional dynamical systems. <em>Nonlinearity</em>, 18(5), 2135. <a href="https://doi.org/10.1088/0951-7715/18/5/013" class="uri">https://doi.org/10.1088/0951-7715/18/5/013</a></li>
+<li>Garcia, S. P., &amp; Almeida, J. S. (2006, September 12). Multivariate phase space reconstruction by nearest neighbor embedding with different time delays. arXiv [nlin.CD]. Retrieved from <a href="http://arxiv.org/abs/nlin/0609029" class="uri">http://arxiv.org/abs/nlin/0609029</a></li>
+<li>Spirtes, P., Glymour, C., &amp; Scheines, R. (1993). Causation, Prediction, and Search. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4612-2748-9" class="uri">https://doi.org/10.1007/978-1-4612-2748-9</a></li>
+<li>Deyle, E. R., &amp; Sugihara, G. (2011). Generalized theorems for nonlinear state space reconstruction. <em>PloS One</em>, 6(3), e18295. <a href="https://doi.org/10.1371/journal.pone.0018295" class="uri">https://doi.org/10.1371/journal.pone.0018295</a></li>
+<li>Shalizi, C. R. (2003, May 12). Optimal Nonlinear Prediction of Random Fields on Networks. arXiv [math.PR]. Retrieved from <a href="http://arxiv.org/abs/math/0305160" class="uri">http://arxiv.org/abs/math/0305160</a></li>
+<li>Shalizi, C. R., &amp; Moore, C. (2003, March 29). What Is a Macrostate? Subjective Observations and Objective Dynamics. arXiv [cond-mat.stat-mech]. Retrieved from <a href="http://arxiv.org/abs/cond-mat/0303625" class="uri">http://arxiv.org/abs/cond-mat/0303625</a></li>
+<li>Wingate, D., &amp; Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, &amp; S. Roweis (Eds.), <em>Advances in Neural Information Processing Systems</em> (Vol. 20). Retrieved from <a href="https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf" class="uri">https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf</a></li>
+</ul>
+</section>
+<section id="algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="algorithms">Algorithms</h3>
+<ul>
+<li>Ye, H., Deyle, E. R., Gilarranz, L. J., &amp; Sugihara, G. (2015). Distinguishing time-delayed causal interactions using convergent cross mapping. <em>Scientific Reports</em>, 5, 14750. <a href="https://doi.org/10.1038/srep14750" class="uri">https://doi.org/10.1038/srep14750</a></li>
+<li>Le, T. D., Hoang, T., Li, J., Liu, L., Liu, H., &amp; Hu, S. (2019). A Fast PC Algorithm for High Dimensional Causal Discovery with Multi-Core PCs. <em>IEEE/ACM Transactions on Computational Biology and Bioinformatics / IEEE</em>, ACM, 16(5), 1483–1495. &lt;https://doi.org/10.1109/TCBB.2016.2591526</li>
+<li>Langford, J., Salakhutdinov, R., &amp; Zhang, T. (2009, May 20). Learning Nonlinear Dynamic Models. arXiv [cs.AI]. Retrieved from <a href="http://arxiv.org/abs/0905.3369" class="uri">http://arxiv.org/abs/0905.3369</a></li>
+<li>Littman, M. L., Sutton, R. S., &amp; Singh, S. (n.d.). Predictive Representations of State. In <em>NIPS 2001</em>. Retrieved from <a href="https://web.eecs.umich.edu/~baveja/Papers/psr.pdf" class="uri">https://web.eecs.umich.edu/~baveja/Papers/psr.pdf</a></li>
+<li>Chalupka, K., Perona, P., &amp; Eberhardt, F. (2014, December 7). Visual Causal Feature Learning. arXiv [stat.ML]. Retrieved from <a href="http://arxiv.org/abs/1412.2309" class="uri">http://arxiv.org/abs/1412.2309</a></li>
+<li>Hefny, A., Downey, C., &amp; Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310&gt;</li>
+<li>Subramanian, J., Sinha, A., Seraj, R., &amp; Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. <em>Journal of Machine Learning Research: JMLR</em>, 23(12), 1–83. Retrieved from <a href="https://jmlr.org/papers/v23/20-1165.html" class="uri">https://jmlr.org/papers/v23/20-1165.html</a></li>
+<li>Garcia, S. P., &amp; Almeida, J. S. (2006, September 12). Multivariate phase space reconstruction by nearest neighbor embedding with different time delays. arXiv [nlin.CD]. Retrieved from <a href="http://arxiv.org/abs/nlin/0609029" class="uri">http://arxiv.org/abs/nlin/0609029</a></li>
+</ul>
+
+
+
+</section>
+</section>
+
+
+ ]]></description>
+  <category>math</category>
+  <category>stats</category>
+  <guid>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</guid>
+  <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Robustness</title>
   <link>https://viveks.me/notebooks/posts/robustness/index.html</link>
   <description><![CDATA[ 
@@ -305,75 +375,6 @@ Gelman, A. (2006). <span class="nocase">The boxer, the wrestler, and the coin fl
   <category>uncertainty</category>
   <category>decision-making</category>
   <guid>https://viveks.me/notebooks/posts/robustness/index.html</guid>
-  <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>State-Space Reconstruction</title>
-  <link>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<p>Given a time series that we assume came from a dynamical system, can we reconstruct the state space of the system from the observations? This is complicated by a few features of chaotic or noisy systems.</p>
-<section id="setup-and-theorem" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="setup-and-theorem">Setup and Theorem</h2>
-<div class="page-columns page-full"><p>Suppose we have a <em>deterministic</em> dynamical system with state <img src="https://latex.codecogs.com/png.latex?z(t)"> on a smooth manifold of dimension <img src="https://latex.codecogs.com/png.latex?m">. Our observations are <img src="https://latex.codecogs.com/png.latex?x(t)%20=%20g(z(t))"><sup>1</sup>.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;often <img src="https://latex.codecogs.com/png.latex?g(y)%20=%20y%20+%20%5Cvarepsilon_t">, where <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon_t"> is some noise process, but this can be more complex.</p></li></div></div>
-<p>For a time horizon <img src="https://latex.codecogs.com/png.latex?%5Ctau%20%3C%20%5Cinfty"> and a positive integer <img src="https://latex.codecogs.com/png.latex?k">, set <img src="https://latex.codecogs.com/png.latex?s(t)%20=%20(x(t),%20x(t%20-%20%5Ctau),%20x(t%20-%202%5Ctau),%20%5Cldots,%20x(t%20-%20(k-1)%20%5Ctau))."> It turns out <span class="citation" data-cites="Takens1981-gq">(Takens., 1981)</span> that if <img src="https://latex.codecogs.com/png.latex?k%20%5Cgeq%202m+1">, then <img src="https://latex.codecogs.com/png.latex?z(t)%20=%20%5Cphi(s(t))"> for some diffeomorphism <img src="https://latex.codecogs.com/png.latex?%5Cphi">.</p>
-<div class="no-row-height column-margin column-container"><div id="ref-Takens1981-gq" class="csl-entry">
-Takens., F. (1981). <span class="nocase">Detecting strange attractors in turbulence</span>. In D. A. Rand &amp; L. S. Young (Eds.), <em><span class="nocase"><em>Symposium on Dynamical Systems and Turbulence (</em>Springer Lecture Notes in Mathematics vol. 898)</span></em> (pp. 366–381). Berlin, Germany: Springer. Retrieved from <a href="https://www.crcv.ucf.edu/gauss/info/Takens.pdf">https://www.crcv.ucf.edu/gauss/info/Takens.pdf</a>
-</div></div><div class="page-columns page-full"><p>A nice application of this is in the context of climate change. A common tendency along among certain climate-change skeptics<sup>2</sup> was to use Granger causality to claim that warming causes CO<sub>2</sub> increases. This use violates the relevant assumptions of Granger causality, namely that there is no confounding causal influence on both time series<sup>3</sup>. Instead, <span class="citation" data-cites="Van_Nes2015-ua">Nes et al. (2015)</span> show using Takens’ theorem that we get the expected feedbacks on the right time scales.</p><div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Who know only enough to make these mistakes but not recognize them!</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In this case, Milankovitch cycles but we also know that the relationship between temperature and CO<sub>2</sub> changes depending on the time scale of interest</p></li><div id="ref-Van_Nes2015-ua" class="csl-entry">
-Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &amp; Sugihara, G. (2015). Causal feedbacks in climate change. <em>Nat. Clim. Chang.</em>, <em>5</em>(5), 445–448. <a href="https://doi.org/10.1038/nclimate2568">https://doi.org/10.1038/nclimate2568</a>
-</div></div></div>
-</section>
-<section id="main-interest" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="main-interest">Main Interest</h2>
-<div class="page-columns page-full"><p>My main interest is in getting this to work on multi-sector networks: can we reconstruct the state trajectory of a system of many state variables given a simulation? Using an ensemble of simulations would allow us to look for tipping points or teleconnections or track the propagation of shocks<sup>4</sup>. The complications in making this tractable are stochasticity<sup>5</sup> and dimensionality<sup>6</sup>, but maybe looking at network properties can reduce the dimensionality. Maybe this can be done with the PC algorithm.</p><div class="no-row-height column-margin column-container"><li id="fn4"><p><sup>4</sup>&nbsp;“George Box has [almost] said”The only way to find out what will happen when a complex system is disturbed is to disturb the system, not merely to observe it passively.” These words of caution about “natural experiments” are uncomfortably strong. Yet in today’s world we see no alternative to accepting them as, if anything, too weak.” - Mosteller &amp; Tukey (1977)</p></li><li id="fn5"><p><sup>5</sup>&nbsp;We would need to reconstruct a Markov process</p></li><li id="fn6"><p><sup>6</sup>&nbsp;Finding the relevant DAG is expensive.</p></li></div></div>
-</section>
-<section id="things-i-need-to-think-about-more" class="level2">
-<h2 class="anchored" data-anchor-id="things-i-need-to-think-about-more">Things I Need To Think About More</h2>
-<ul>
-<li>Methods for reconstructing networks from potentially noisy simulations</li>
-<li>Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?</li>
-</ul>
-</section>
-<section id="relevant-reading" class="level2">
-<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
-<section id="reconstruction" class="level3">
-<h3 class="anchored" data-anchor-id="reconstruction">Reconstruction</h3>
-<ul>
-<li>Takens., F. (1981). Detecting strange attractors in turbulence. In D. A. Rand &amp; L. S. Young (Eds.), <em>Symposium on Dynamical Systems and Turbulence</em> (Springer Lecture Notes in Mathematics vol.&nbsp;898) (pp.&nbsp;366–381). Berlin, Germany: Springer.</li>
-<li>Stark, J., Broomhead, D. S., Davies, M. E., &amp; Huke, J. (1997). Takens embedding theorems for forced and stochastic systems. <em>Nonlinear Analysis, Theory, Methods &amp; Applications</em>, 30(8), 5303–5314. <a href="https://doi.org/10.1016/S0362-546X(96)00149-6" class="uri">https://doi.org/10.1016/S0362-546X(96)00149-6</a></li>
-<li>Robinson, J. C. (2005). A topological delay embedding theorem for infinite-dimensional dynamical systems. <em>Nonlinearity</em>, 18(5), 2135. <a href="https://doi.org/10.1088/0951-7715/18/5/013" class="uri">https://doi.org/10.1088/0951-7715/18/5/013</a></li>
-<li>Garcia, S. P., &amp; Almeida, J. S. (2006, September 12). Multivariate phase space reconstruction by nearest neighbor embedding with different time delays. arXiv [nlin.CD]. Retrieved from <a href="http://arxiv.org/abs/nlin/0609029" class="uri">http://arxiv.org/abs/nlin/0609029</a></li>
-<li>Spirtes, P., Glymour, C., &amp; Scheines, R. (1993). Causation, Prediction, and Search. New York, NY: Springer. <a href="https://doi.org/10.1007/978-1-4612-2748-9" class="uri">https://doi.org/10.1007/978-1-4612-2748-9</a></li>
-<li>Deyle, E. R., &amp; Sugihara, G. (2011). Generalized theorems for nonlinear state space reconstruction. <em>PloS One</em>, 6(3), e18295. <a href="https://doi.org/10.1371/journal.pone.0018295" class="uri">https://doi.org/10.1371/journal.pone.0018295</a></li>
-<li>Shalizi, C. R. (2003, May 12). Optimal Nonlinear Prediction of Random Fields on Networks. arXiv [math.PR]. Retrieved from <a href="http://arxiv.org/abs/math/0305160" class="uri">http://arxiv.org/abs/math/0305160</a></li>
-<li>Shalizi, C. R., &amp; Moore, C. (2003, March 29). What Is a Macrostate? Subjective Observations and Objective Dynamics. arXiv [cond-mat.stat-mech]. Retrieved from <a href="http://arxiv.org/abs/cond-mat/0303625" class="uri">http://arxiv.org/abs/cond-mat/0303625</a></li>
-<li>Wingate, D., &amp; Baveja, S. (2007). Exponential Family Predictive Representations of State. In J. Platt, D. Koller, Y. Singer, &amp; S. Roweis (Eds.), <em>Advances in Neural Information Processing Systems</em> (Vol. 20). Retrieved from <a href="https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf" class="uri">https://proceedings.neurips.cc/paper_files/paper/2007/file/a9a1d5317a33ae8cef33961c34144f84-Paper.pdf</a></li>
-</ul>
-</section>
-<section id="algorithms" class="level3">
-<h3 class="anchored" data-anchor-id="algorithms">Algorithms</h3>
-<ul>
-<li>Ye, H., Deyle, E. R., Gilarranz, L. J., &amp; Sugihara, G. (2015). Distinguishing time-delayed causal interactions using convergent cross mapping. <em>Scientific Reports</em>, 5, 14750. <a href="https://doi.org/10.1038/srep14750" class="uri">https://doi.org/10.1038/srep14750</a></li>
-<li>Le, T. D., Hoang, T., Li, J., Liu, L., Liu, H., &amp; Hu, S. (2019). A Fast PC Algorithm for High Dimensional Causal Discovery with Multi-Core PCs. <em>IEEE/ACM Transactions on Computational Biology and Bioinformatics / IEEE</em>, ACM, 16(5), 1483–1495. &lt;https://doi.org/10.1109/TCBB.2016.2591526</li>
-<li>Langford, J., Salakhutdinov, R., &amp; Zhang, T. (2009, May 20). Learning Nonlinear Dynamic Models. arXiv [cs.AI]. Retrieved from <a href="http://arxiv.org/abs/0905.3369" class="uri">http://arxiv.org/abs/0905.3369</a></li>
-<li>Littman, M. L., Sutton, R. S., &amp; Singh, S. (n.d.). Predictive Representations of State. In <em>NIPS 2001</em>. Retrieved from <a href="https://web.eecs.umich.edu/~baveja/Papers/psr.pdf" class="uri">https://web.eecs.umich.edu/~baveja/Papers/psr.pdf</a></li>
-<li>Chalupka, K., Perona, P., &amp; Eberhardt, F. (2014, December 7). Visual Causal Feature Learning. arXiv [stat.ML]. Retrieved from <a href="http://arxiv.org/abs/1412.2309" class="uri">http://arxiv.org/abs/1412.2309</a></li>
-<li>Hefny, A., Downey, C., &amp; Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310&gt;</li>
-<li>Subramanian, J., Sinha, A., Seraj, R., &amp; Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. <em>Journal of Machine Learning Research: JMLR</em>, 23(12), 1–83. Retrieved from <a href="https://jmlr.org/papers/v23/20-1165.html" class="uri">https://jmlr.org/papers/v23/20-1165.html</a></li>
-</ul>
-
-
-
-</section>
-</section>
-
-
- ]]></description>
-  <category>math</category>
-  <category>stats</category>
-  <guid>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</guid>
   <pubDate>Sat, 10 Jun 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
