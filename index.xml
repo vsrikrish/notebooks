@@ -10,7 +10,67 @@
 <atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Wed, 14 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 15 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Agent-Based Model Calibration</title>
+  <link>https://viveks.me/notebooks/posts/abm-calibration/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="page-columns page-full"><p>See <a href="../agent-based-modeling/">agent-based modeling</a> for broader context. ABMs are notoriously difficult to calibrate (modesty aside, I’ve written one of several papers on this <span class="citation" data-cites="Srikrishnan2021-na">(Srikrishnan &amp; Keller, 2021)</span>, with apparently little impact on the cottage industry of ABM papers with weak or no calibration). There are some very sensible approaches to validation, namely pattern-based modeling, but a sound and consistent approach to calibration beyond just fiddling with parameters until you get something that looks like the data is still lacking. This is one (very good) reason why economists, and others who are serious about model-based inference, are skeptical of ABMs. Nevertheless, this type of generative social science model is incredibly appropriate for a lot of interesting problems<sup>1</sup>, and so we should try to do better instead of writing it off.</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Mainly as an explorative model, though…it’s not clear to me how to have any confidence in these models for consolidative purposes.</p></li></div></div>
+<div class="no-row-height column-margin column-container"><div id="ref-Srikrishnan2021-na" class="csl-entry">
+Srikrishnan, V., &amp; Keller, K. (2021). <span class="nocase">Small increases in agent-based model complexity can result in large increases in required calibration data</span>. <em>Environmental Modelling &amp; Software</em>, <em>138</em>, 104978. <a href="https://doi.org/10.1016/j.envsoft.2021.104978">https://doi.org/10.1016/j.envsoft.2021.104978</a>
+</div></div><p>There are a few fundamental problems:</p>
+<ol type="1">
+<li>Data is just one realization of a stochastic process, and these processes are particularly noisy for the types of problems we’d like to use ABMs for. Tweaking the model until you fit the data is likely to overfit, and may underestimate equi- and multi-finality. If these models are interesting, the odds are that they don’t have a unique “best estimate” of parameters, and that’s assuming no <a href="../model-discrepancy/">model discrepancy</a> and observational error/noise.</li>
+<li>The complexity of a good ABM makes it difficult to write down the calibration likelihood cleanly.<sup>2</sup></li>
+<li>Highly disaggregated data is either difficult to obtain or shouldn’t be used for privacy reasons. So often all we have are highly aggregated or elicited data, like survey results. There is a strong trend towards using these to calibrate ABMs, but I suspect this data is actually quite weak in terms of information (and therefore should be thought of as akin to expert assessment rather than the type of observational data we typically use in environmental modeling).</li>
+<li>If an ABM is stochastic (and good ones probably should be), you really would like to re-run the ABM multiple times for each parameter setting to obtain multiple trajectories due to the complexity of its dynamics, and then compare that distribution to the data. This can get computationally expensive as the complexity of the model increases, so some type of parallelized approach may be needed.</li>
+</ol>
+<div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;In principle, many ABMs can be written as Markovian models, but this is not always easy to do in practice.</p></li></div><div class="page-columns page-full"><p>There is some movement towards using machine-learning methods to fit non-parametric models to make projections, but I think that’s a mistake. One is that without structure, it’s wildly easy to overfit or end up with nonsense.<sup>3</sup> The other is that there’s no reason to believe any of the processes are stationary, and therefore that a structure-less model fit on historical or current data could generalize into the future <span class="citation" data-cites="Oreskes1994-br">(Oreskes et al., 1994)</span>.</p><div class="no-row-height column-margin column-container"><li id="fn3"><p><sup>3</sup>&nbsp;<a href="https://www.bu.edu/earth/profiles/ian-sue-wing/">Ian Sue Wing</a> once told me that what he loves about economists is that when they don’t know how to make sense of the data, they add structure. I think this 100% the right way to go about things, and as Andrew Gelman puts it <a href="https://statmodeling.stat.columbia.edu/2014/05/22/big-data-needs-big-model/">“Big Data Needs Big Model”</a>.</p></li><div id="ref-Oreskes1994-br" class="csl-entry">
+Oreskes, N., Shrader-Frechette, K., &amp; Belitz, K. (1994). <span class="nocase">Verification, validation, and confirmation of numerical models in the earth sciences</span>. <em>Science</em>, <em>263</em>, 641–646. <a href="https://doi.org/10.1126/science.263.5147.641">https://doi.org/10.1126/science.263.5147.641</a>
+</div></div></div>
+<p>So what are some options?</p>
+<ul>
+<li><a href="https://sites.google.com/view/benslee/">Ben Lee</a> and I are thinking about particle filtering to compare distributions of data (such as surveys with error bars) to distributions of simulation outcomes. This is potentially nice because it’s parallelizable and allows us to incorporate discrepancy.</li>
+<li><a href="https://www.stat.cmu.edu/~cshalizi/">Cosma Shalizi</a> has some interesting ideas about indirect inference and random feature matching, which is related to Approximate Bayesian approaches.</li>
+</ul>
+<section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<ul>
+<li>Ciampaglia, G. L. (2013). A framework for the calibration of social simulation models. arXiv [physics.soc-ph]. <a href="https://doi.org/10.1142/S0219525913500306" class="uri">https://doi.org/10.1142/S0219525913500306</a></li>
+<li>Anzola, D. (2021). The Theory-Practice Gap in the Evaluation of Agent-Based Social Simulations. <em>Science in Context</em>, 34(3), 393–410. <a href="https://doi.org/10.1017/S0269889722000242" class="uri">https://doi.org/10.1017/S0269889722000242</a></li>
+<li>Fabretti, A. (2013). On the problem of calibrating an agent based model for financial markets. <em>Journal of Economic Interaction and Coordination</em>, 8(2), 277–293. <a href="https://doi.org/10.1007/s11403-012-0096-3" class="uri">https://doi.org/10.1007/s11403-012-0096-3</a></li>
+<li>Fabretti, A. (2018). Markov chain analysis in agent-based model calibration by classical and simulated minimum distance. <em>Knowledge and Information Systems</em>, 61(1), 259–276. <a href="https://doi.org/10.1007/s10115-018-1258-y" class="uri">https://doi.org/10.1007/s10115-018-1258-y</a></li>
+<li>Fadikar, A., Higdon, D., Chen, J., Lewis, B., Venkatramanan, S., &amp; Marathe, M. (2017, December 2). Calibrating a stochastic agent based model using quantile-based emulation. <em>SIAM/ASA J. Uncertainty Quantification</em>. <a href="https://doi.org/10.1137/17M1161233" class="uri">https://doi.org/10.1137/17M1161233</a></li>
+<li>Lamperti, F., Roventini, A., &amp; Sani, A. (2018). Agent-based model calibration using machine learning surrogates. <em>Journal of Economic Dynamics &amp; Control</em>, 90, 366–389. <a href="https://doi.org/10.1016/j.jedc.2018.03.011" class="uri">https://doi.org/10.1016/j.jedc.2018.03.011</a></li>
+<li>Ngo, T. A., &amp; See, L. (2012). Calibration and validation of agent-based models of land cover change. In A. J. Heppenstall, A. T. Crooks, L. M. See, &amp; M. Batty (Eds.), <em>Agent-Based Models of Geographical Systems</em> (pp.&nbsp;181–197). Dordrecht: Springer Netherlands. <a href="https://doi.org/10.1007/978-90-481-8927-4_10" class="uri">https://doi.org/10.1007/978-90-481-8927-4_10</a></li>
+<li>Srikrishnan, V., &amp; Keller, K. (2021). Small increases in agent-based model complexity can result in large increases in required calibration data. <em>Environmental Modelling &amp; Software</em>, 138, 104978. <a href="https://doi.org/10.1016/j.envsoft.2021.104978" class="uri">https://doi.org/10.1016/j.envsoft.2021.104978</a></li>
+<li>Shalizi, C. R. (2021). A note on simulation-based inference by matching random features. arXiv [stat.ME]. Retrieved from <a href="http://arxiv.org/abs/2111.09220" class="uri">http://arxiv.org/abs/2111.09220</a></li>
+<li>Shalizi, C. R., &amp; Moore, C. (2003). What Is a Macrostate? Subjective Observations and Objective Dynamics. arXiv [cond-mat.stat-mech]. Retrieved from <a href="http://arxiv.org/abs/cond-mat/0303625" class="uri">http://arxiv.org/abs/cond-mat/0303625</a></li>
+<li>Banisch, S., Lima, R., &amp; Araújo, T. (2011, August 8). Agent based models and opinion dynamics as Markov chains. arXiv [nlin.AO]. Retrieved from <a href="http://arxiv.org/abs/1108.1716" class="uri">http://arxiv.org/abs/1108.1716</a></li>
+<li>KhudaBukhsh, W. R., Auddy, A., Disser, Y., &amp; Koeppl, H. (2019). Approximate lumpability for Markovian agent-based models using local symmetries. <em>Journal of Applied Probability</em>, 56(3), 647–671. <a href="https://doi.org/10.1017/jpr.2019.44" class="uri">https://doi.org/10.1017/jpr.2019.44</a></li>
+<li>Filatova, T. (2015). Empirical agent-based land market: Integrating adaptive economic behavior in urban land-use models. <em>Computers, Environment and Urban Systems</em>, 54, 397–413. <a href="https://doi.org/10/ggr7zw" class="uri">https://doi.org/10/ggr7zw</a></li>
+<li>Lee, J.-S., &amp; Filatova, T. (2019). Dimension reduction of multivariate outputs of socio-environmental agent-based models. <em>Ecological Complexity</em>, 40, 100730. <a href="https://doi.org/10.1016/j.ecocom.2018.07.008" class="uri">https://doi.org/10.1016/j.ecocom.2018.07.008</a></li>
+<li>Lee, J.-S., Filatova, T., Ligmann-Zielinska, A., Hassani-Mahmooei, B., Stonedahl, F., Lorscheid, I., et al.&nbsp;(2015). The complexities of agent-based modeling output analysis. <em>Journal of Artificial Societies and Social Simulation: JASSS</em>, 18(4), 4. <a href="https://doi.org/10.18564/jasss.2897" class="uri">https://doi.org/10.18564/jasss.2897</a></li>
+<li>Taghikhah, F., Voinov, A., Filatova, T., &amp; Polhill, J. (2022). Machine-assisted agent-based modeling: Opening the black box. <em>Journal of Computational Science</em>, 64, 101854. <a href="https://doi.org/10.1016/j.jocs.2022.101854" class="uri">https://doi.org/10.1016/j.jocs.2022.101854</a></li>
+<li>Kattwinkel, M., &amp; Reichert, P. (2017). Bayesian parameter inference for individual-based models using a particle Markov chain Monte Carlo method. <em>Environmental Modelling &amp; Software</em>, 87, 110–119. <a href="https://doi.org/10.1016/j.envsoft.2016.11.001" class="uri">https://doi.org/10.1016/j.envsoft.2016.11.001</a></li>
+<li>Grazzini, J., Richiardi, M., &amp; Tsionas, E. (2017). Bayesian estimation of agent-based models. <em>Journal of Economic Dynamics &amp; Control</em>, 77, 22. <a href="https://doi.org/10.1016/j.jedc.2017.01.014" class="uri">https://doi.org/10.1016/j.jedc.2017.01.014</a></li>
+</ul>
+
+
+
+</section>
+
+
+ ]]></description>
+  <category>modeling</category>
+  <category>stats</category>
+  <category>uncertainty</category>
+  <guid>https://viveks.me/notebooks/posts/abm-calibration/index.html</guid>
+  <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Information Geometry</title>
   <link>https://viveks.me/notebooks/posts/information-geometry/index.html</link>
@@ -140,6 +200,7 @@ Bankes, S. (1993). <span class="nocase">Exploratory modeling for policy analysis
 <li>Brown, D. G., Page, S., Riolo, R., Zellner, M., &amp; Rand, W. (2005). Path dependence and the validation of agent‐based spatial models of land use. <em>International Journal of Geographical Information Science: IJGIS</em>, 19(2), 153–174. <a href="https://doi.org/10.1080/13658810410001713399" class="uri">https://doi.org/10.1080/13658810410001713399</a></li>
 <li>Groeneveld, J., Müller, B., Buchmann, C. M., Dressler, G., Guo, C., Hase, N., et al.&nbsp;(2017). Theoretical foundations of human decision-making in agent-based land use models – A review. <em>Environmental Modelling &amp; Software</em>, 87, 39–48. <a href="https://doi.org/10.1016/j.envsoft.2016.10.008" class="uri">https://doi.org/10.1016/j.envsoft.2016.10.008</a></li>
 <li>Thiem, T. N., Kemeth, F. P., Bertalan, T., Laing, C. R., &amp; Kevrekidis, I. G. (2021). Global and local reduced models for interacting, heterogeneous agents. <em>Chaos</em>, 31, 073139. <a href="https://doi.org/10.1063/5.0055840" class="uri">https://doi.org/10.1063/5.0055840</a></li>
+<li>Hooten, M. B., &amp; Wikle, C. K. (2010). Statistical agent-based models for discrete spatio-temporal systems. <em>Journal of the American Statistical Association</em>, 105(489), 236–248. <a href="https://doi.org/10.1198/jasa.2009.tm09036" class="uri">https://doi.org/10.1198/jasa.2009.tm09036</a></li>
 </ul>
 
 
