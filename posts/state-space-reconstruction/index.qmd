@@ -2,7 +2,7 @@
 title: "State-Space Reconstruction"
 date: "2023-06-10"
 categories: [math, stats]
-date-modified: "2023-06-10"
+date-modified: "2023-06-15"
 ---
 
 Given a time series that we assume came from a dynamical system, can we reconstruct the state space of the system from the observations? This is complicated by a few features of chaotic or noisy systems.
@@ -49,7 +49,7 @@ My main interest is in getting this to work on multi-sector networks: can we rec
 - Chalupka, K., Perona, P., & Eberhardt, F. (2014, December 7). Visual Causal Feature Learning. arXiv [stat.ML]. Retrieved from <http://arxiv.org/abs/1412.2309>
 - Hefny, A., Downey, C., & Gordon, G. (2015, May 20). Supervised Learning for Dynamical System Learning. arXiv [stat.ML]. Retrieved from ,http://arxiv.org/abs/1505.05310>
 - Subramanian, J., Sinha, A., Seraj, R., & Mahajan, A. (2022). Approximate Information State for Approximate Planning and Reinforcement Learning in Partially Observed Systems. *Journal of Machine Learning Research: JMLR*, 23(12), 1–83. Retrieved from <https://jmlr.org/papers/v23/20-1165.html>
-
+- Garcia, S. P., & Almeida, J. S. (2006, September 12). Multivariate phase space reconstruction by nearest neighbor embedding with different time delays. arXiv [nlin.CD]. Retrieved from <http://arxiv.org/abs/nlin/0609029>
 
 
  
