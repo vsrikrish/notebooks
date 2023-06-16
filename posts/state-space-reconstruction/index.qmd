@@ -23,7 +23,7 @@ My main interest is in getting this to work on multi-sector networks: can we rec
 ## Things I Need To Think About More
 
 - Methods for reconstructing networks from potentially noisy simulations
-- Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?
+- Use of network invariants for dimension-reduction. Maybe [topological data analysis](../topological-data-analysis/) has some application?
 
 ## Relevant Reading
 

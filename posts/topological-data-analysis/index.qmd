@@ -1,0 +1,39 @@
+---
+title: "Topological Data Analysis"
+date: "2023-06-16"
+categories: [math]
+date-modified: "2023-06-16"
+---
+
+A category for several approaches which use topological invariants, such as persistent homology, to encode the structure in a dataset. The use of topology emphasizes shape and connectivity, rather than distance.
+
+I'm interested in seeing if we can use TDA to encode changes in a multi-sector network structure over time to identify and cluster uncertainty/risk propagation regimes and to identify key "pressure points." As @Wasserman2018-eo puts it, it is not yet clear whether we can use TDA for discovery, but identifying which part of a network has crossed some threshold, or if multiple nodes are responding to a shock in different patterns, could be doable, even if we need to dig more deeply to understand why.
+
+## Relevant Reading
+
+### Overview
+
+- Wasserman, L. (2018). Topological data analysis. *Annual Review of Statistics and Its Application*, 5(1), 501–532. <https://doi.org/10.1146/annurev-statistics-031017-100045>
+- Aktas, M. E., Akbas, E., & Fatmaoui, A. E. (2019). Persistence homology of networks: Methods and applications. *Applied Network Science*, 4(1), 1–28. <https://doi.org/10.1007/s41109-019-0179-3>
+- Chazal, F., & Michel, B. (2021). An introduction to topological data analysis: Fundamental and practical aspects for data scientists. arXiv:1710.04019 [cs, Math, Stat]. Retrieved from <http://arxiv.org/abs/1710.04019>
+- Ghrist, R. (2018). Homological algebra and data. In M. Mahoney, J. Duchi, & A. Gilbert (Eds.), *IAS/Park City Mathematics Series* (Vol. 25, pp. 273–325). Providence, Rhode Island: American Mathematical Society. Retrieved from <http://www.ams.org/pcms/025>
+- Horak, D., Maletić, S., & Rajković, M. (2009). Persistent homology of complex networks. *Journal of Statistical Mechanics*, 2009(03), P03034. <https://doi.org/10.1088/1742-5468/2009/03/P03034>
+- Sheffar, D. (2020). Introductory topological data analysis. arXiv:2004.04108 [math]. Retrieved from <http://arxiv.org/abs/2004.04108>
+- Smith, A. D., Dłotko, P., & Zavala, V. M. (2021). Topological data analysis: Concepts, computation, and applications in chemical engineering. *Computers & Chemical Engineering*, 146, 107202. <https://doi.org/10.1016/j.compchemeng.2020.107202>
+
+### Applications
+
+- Carstens, C. J., & Horadam, K. J. (2013). Persistent homology of collaboration networks. *Mathematical Problems in Engineering*, 2013, e815035. <https://doi.org/10.1155/2013/815035>
+- Gidea, M. (2017). Topological data analysis of critical transitions in financial networks. In E. Shmueli, B. Barzel, & R. Puzis (Eds.), *3rd International Winter School and Conference on Network Science* (pp. 47–59). Cham: Springer International Publishing. <https://doi.org/10.1007/978-3-319-55471-6_5>
+- Guss, W. H., & Salakhutdinov, R. (2018, February 13). On Characterizing the Capacity of Neural Networks using Algebraic Topology. arXiv [cs.LG]. Retrieved from <http://arxiv.org/abs/1802.04443>
+- Hajij, M., Wang, B., Scheidegger, C., & Rosen, P. (2017). Visual detection of structural changes in time-varying graphs using persistent homology. arXiv:1707.06683 [cs]. Retrieved from <http://arxiv.org/abs/1707.06683>
+- Ignacio, P. S. P., & Darcy, I. K. (2019). Tracing patterns and shapes in remittance and migration networks via persistent homology. *EPJ Data Science*, 8(1), 1–25. <https://doi.org/10.1140/epjds/s13688-018-0179-z>
+- Lee, H., Kang, H., Chung, M. K., Kim, B.-N., & Lee, D. S. (2012). Persistent brain network homology from the perspective of dendrogram. *IEEE Transactions on Medical Imaging*, 31(12), 2267–2277. <https://doi.org/10.1109/TMI.2012.2219590>
+- Rieck, B., Fugacci, U., Lukasczyk, J., & Leitte, H. (2018). Clique community persistence: A topological visual analysis approach for complex networks. *IEEE Transactions on Visualization and Computer Graphics*, 24(1), 822–831. <https://doi.org/10.1109/TVCG.2017.2744321>
+- Hickok, A., Needell, D., & Porter, M. A. (2021). Analysis of spatiotemporal anomalies using persistent homology: case studies with COVID-19 data. arXiv:2107.09188 [physics, Q-Bio]. Retrieved from <http://arxiv.org/abs/2107.09188>
+- Chowdhury, S., & Mémoli, F. (2017). Persistent path homology of directed networks. arXiv:1701.00565 [math]. Retrieved from <http://arxiv.org/abs/1701.00565>
+
+### Algorithms
+
+- Kannan, H., Saucan, E., Roy, I., & Samal, A. (2019). Persistent homology of unweighted complex networks via discrete Morse theory. *Scientific Reports*, 9(1), 13817. <https://doi.org/10.1038/s41598-019-50202-3>
+- Petri, G., Scolamiero, M., Donato, I., & Vaccarino, F. (2013). Topological strata of weighted complex networks. *PloS One*, 8(6), e66506. <https://doi.org/10.1371/journal.pone.0066506>
