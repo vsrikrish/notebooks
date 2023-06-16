@@ -12,6 +12,29 @@
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
 <item>
+  <title>The Uncanny Valley of Systems Modeling</title>
+  <link>https://viveks.me/notebooks/posts/uncanny-valley-systems-modeling/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div class="page-columns page-full"><p>I don’t know if the “uncanny valley”<sup>1</sup> metaphor is quite right for this, but it’s the best I’ve got at the moment. The idea is that there are two extremes to modeling systems:</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;The term describing the emotional response humans have to anthropomorphic representations which are relatively close to human, but dissimilar enough that the deficiencies in the representation trigger deep discomfort.</p></li></div></div>
+<ol type="1">
+<li><strong>Highly aggregated</strong>: there is no pretense at trying to represent at some of the more complex or smaller-scale connections or dynamics. This approach may work to provide an equilibrium or average (with respect to the system dynamics, not distributions of outputs) response, and is so stylized that those limitations are relatively clear.<sup>2</sup></li>
+<li><strong>Full representation</strong>: this approach would<sup>3</sup> represent all of the relevant dynamics, so we can get a full accounting of relevant influences and feedbacks.</li>
+</ol>
+<div class="no-row-height column-margin column-container"><li id="fn2"><p><sup>2</sup>&nbsp;Though that doesn’t always stop people from making broader claims than are warranted from this approach.</p></li><li id="fn3"><p><sup>3</sup>&nbsp;In the ideal, which is never achieved.</p></li></div><p>Models in between these two extremes (which are most of them) can be an uncomfortable place to be without carefully thinking about uncertainties in the interconnections, and can easily lead to exaggerated senses of the relative importance or benefits of particular interventions.</p>
+
+
+
+
+ ]]></description>
+  <category>modeling</category>
+  <category>systems</category>
+  <guid>https://viveks.me/notebooks/posts/uncanny-valley-systems-modeling/index.html</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Topological Data Analysis</title>
   <link>https://viveks.me/notebooks/posts/topological-data-analysis/index.html</link>
   <description><![CDATA[ 

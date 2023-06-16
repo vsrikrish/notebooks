@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/uncanny-valley-systems-modeling/index.html",
       "/posts/topological-data-analysis/index.html",
       "/posts/state-space-reconstruction/index.html",
       "/posts/abm-calibration/index.html",

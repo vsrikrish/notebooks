@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://viveks.me/notebooks/index.html</loc>
-    <lastmod>2023-06-16T11:03:29.004Z</lastmod>
+    <lastmod>2023-06-16T17:34:53.784Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/about.html</loc>
-    <lastmod>2023-06-16T11:03:29.660Z</lastmod>
+    <lastmod>2023-06-16T17:34:54.416Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</loc>
-    <lastmod>2023-06-16T11:03:30.276Z</lastmod>
+    <lastmod>2023-06-16T17:34:54.984Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/model-discrepancy/index.html</loc>
-    <lastmod>2023-06-16T11:03:30.640Z</lastmod>
+    <lastmod>2023-06-16T17:34:55.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/uncanny-valley-systems-modeling/index.html</loc>
+    <lastmod>2023-06-16T17:34:55.632Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
-    <lastmod>2023-06-16T11:03:31.068Z</lastmod>
+    <lastmod>2023-06-16T17:34:56.052Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/abm-calibration/index.html</loc>
-    <lastmod>2023-06-16T11:03:31.724Z</lastmod>
+    <lastmod>2023-06-16T17:34:56.628Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/agent-based-modeling/index.html</loc>
-    <lastmod>2023-06-16T11:03:32.460Z</lastmod>
+    <lastmod>2023-06-16T17:34:57.268Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/robustness/index.html</loc>
-    <lastmod>2023-06-16T11:03:33.012Z</lastmod>
+    <lastmod>2023-06-16T17:34:57.764Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/information-geometry/index.html</loc>
-    <lastmod>2023-06-16T11:03:33.472Z</lastmod>
+    <lastmod>2023-06-16T17:34:58.208Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/topological-data-analysis/index.html</loc>
-    <lastmod>2023-06-16T11:03:34.000Z</lastmod>
+    <lastmod>2023-06-16T17:34:58.636Z</lastmod>
   </url>
 </urlset>

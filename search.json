@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Notebooks",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\n\n\n\n\nTopological Data Analysis\n\n\n6/16/23\n\n\n6/16/23\n\n\n\n\nState-Space Reconstruction\n\n\n6/10/23\n\n\n6/15/23\n\n\n\n\nAgent-Based Model Calibration\n\n\n6/15/23\n\n\n6/15/23\n\n\n\n\nAgent-Based Models\n\n\n6/13/23\n\n\n6/15/23\n\n\n\n\nInformation Geometry\n\n\n6/14/23\n\n\n6/14/23\n\n\n\n\nModel Discrepancy\n\n\n6/11/23\n\n\n6/11/23\n\n\n\n\nRobustness\n\n\n6/10/23\n\n\n6/11/23\n\n\n\n\nDeep Uncertainty and Subjective Probabilities\n\n\n6/9/23\n\n\n6/10/23\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\nDate\n\n\nModified\n\n\n\n\n\n\nThe Uncanny Valley of Systems Modeling\n\n\n6/16/23\n\n\n6/16/23\n\n\n\n\nTopological Data Analysis\n\n\n6/16/23\n\n\n6/16/23\n\n\n\n\nState-Space Reconstruction\n\n\n6/10/23\n\n\n6/15/23\n\n\n\n\nAgent-Based Model Calibration\n\n\n6/15/23\n\n\n6/15/23\n\n\n\n\nAgent-Based Models\n\n\n6/13/23\n\n\n6/15/23\n\n\n\n\nInformation Geometry\n\n\n6/14/23\n\n\n6/14/23\n\n\n\n\nModel Discrepancy\n\n\n6/11/23\n\n\n6/11/23\n\n\n\n\nRobustness\n\n\n6/10/23\n\n\n6/11/23\n\n\n\n\nDeep Uncertainty and Subjective Probabilities\n\n\n6/9/23\n\n\n6/10/23\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -61,6 +61,13 @@
     "title": "Model Discrepancy",
     "section": "Relevant Reading",
     "text": "Relevant Reading\n\nKennedy, M. C., & O’Hagan, A. (2001). Bayesian calibration of computer models. Journal of the Royal Statistical Society. Series B, Statistical Methodology, 63(3), 425–464. https://doi.org/10.1111/1467-9868.00294\nBrynjarsdóttir, J., & OʼHagan, A. (2014). Learning about physical parameters: the importance of model discrepancy. Inverse Problems, 30(11), 114007. https://doi.org/10.1088/0266-5611/30/11/114007\nJiang, B., Wu, T.-Y., & Wong, W. H. (2018). Approximate Bayesian Computation with Kullback-Leibler Divergence as Data Discrepancy. In A. Storkey & F. Perez-Cruz (Eds.), Proceedings of the Twenty-First International Conference on Artificial Intelligence and Statistics (Vol. 84, pp. 1711–1721). Lanzarote, Spain: PMLR. Retrieved from https://proceedings.mlr.press/v84/jiang18a.html\nGardner, P., Rogers, T. J., Lord, C., & Barthorpe, R. J. (2019). Learning of model discrepancy for structural dynamics applications using Bayesian history matching. Journal of Physics. Conference Series, 1264(1), 012052. https://doi.org/10.1088/1742-6596/1264/1/012052"
+  },
+  {
+    "objectID": "posts/uncanny-valley-systems-modeling/index.html",
+    "href": "posts/uncanny-valley-systems-modeling/index.html",
+    "title": "The Uncanny Valley of Systems Modeling",
+    "section": "",
+    "text": "I don’t know if the “uncanny valley”1 metaphor is quite right for this, but it’s the best I’ve got at the moment. The idea is that there are two extremes to modeling systems:1 The term describing the emotional response humans have to anthropomorphic representations which are relatively close to human, but dissimilar enough that the deficiencies in the representation trigger deep discomfort.\n\nHighly aggregated: there is no pretense at trying to represent at some of the more complex or smaller-scale connections or dynamics. This approach may work to provide an equilibrium or average (with respect to the system dynamics, not distributions of outputs) response, and is so stylized that those limitations are relatively clear.2\nFull representation: this approach would3 represent all of the relevant dynamics, so we can get a full accounting of relevant influences and feedbacks.\n\n2 Though that doesn’t always stop people from making broader claims than are warranted from this approach.3 In the ideal, which is never achieved.Models in between these two extremes (which are most of them) can be an uncomfortable place to be without carefully thinking about uncertainties in the interconnections, and can easily lead to exaggerated senses of the relative importance or benefits of particular interventions."
   },
   {
     "objectID": "posts/deep-uncertainty-subjective-probability/index.html",
