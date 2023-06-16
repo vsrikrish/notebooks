@@ -1,0 +1,13 @@
+---
+title: "The Uncanny Valley of Systems Modeling"
+date: "2023-06-16"
+categories: [modeling, systems]
+date-modified: "2023-06-16"
+---
+
+I don't know if the "uncanny valley"^[The term describing the emotional response humans have to anthropomorphic representations which are relatively close to human, but dissimilar enough that the deficiencies in the representation trigger deep discomfort.] metaphor is quite right for this, but it's the best I've got at the moment. The idea is that there are two extremes to modeling systems:
+
+1. **Highly aggregated**: there is no pretense at trying to represent at some of the more complex or smaller-scale connections or dynamics. This approach may work to provide an equilibrium or average (with respect to the system dynamics, not distributions of outputs) response, and is so stylized that those limitations are relatively clear.^[Though that doesn't always stop people from making broader claims than are warranted from this approach.]
+2. **Full representation**: this approach would^[In the ideal, which is never achieved.] represent all of the relevant dynamics, so we can get a full accounting of relevant influences and feedbacks.
+
+Models in between these two extremes (which are most of them) can be an uncomfortable place to be without carefully thinking about uncertainties in the interconnections, and can easily lead to exaggerated senses of the relative importance or benefits of particular interventions.
