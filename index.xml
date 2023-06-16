@@ -10,7 +10,63 @@
 <atom:link href="https://viveks.me/notebooks/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.361</generator>
-<lastBuildDate>Thu, 15 Jun 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 16 Jun 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Topological Data Analysis</title>
+  <link>https://viveks.me/notebooks/posts/topological-data-analysis/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>A category for several approaches which use topological invariants, such as persistent homology, to encode the structure in a dataset. The use of topology emphasizes shape and connectivity, rather than distance.</p>
+<p>I’m interested in seeing if we can use TDA to encode changes in a multi-sector network structure over time to identify and cluster uncertainty/risk propagation regimes and to identify key “pressure points.” As <span class="citation" data-cites="Wasserman2018-eo">Wasserman (2018)</span> puts it, it is not yet clear whether we can use TDA for discovery, but identifying which part of a network has crossed some threshold, or if multiple nodes are responding to a shock in different patterns, could be doable, even if we need to dig more deeply to understand why.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Wasserman2018-eo" class="csl-entry">
+Wasserman, L. (2018). Topological data analysis. <em>Annu. Rev. Stat. Appl.</em>, <em>5</em>(1), 501–532. <a href="https://doi.org/10.1146/annurev-statistics-031017-100045">https://doi.org/10.1146/annurev-statistics-031017-100045</a>
+</div></div><section id="relevant-reading" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-reading">Relevant Reading</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<ul>
+<li>Wasserman, L. (2018). Topological data analysis. <em>Annual Review of Statistics and Its Application</em>, 5(1), 501–532. <a href="https://doi.org/10.1146/annurev-statistics-031017-100045" class="uri">https://doi.org/10.1146/annurev-statistics-031017-100045</a></li>
+<li>Aktas, M. E., Akbas, E., &amp; Fatmaoui, A. E. (2019). Persistence homology of networks: Methods and applications. <em>Applied Network Science</em>, 4(1), 1–28. <a href="https://doi.org/10.1007/s41109-019-0179-3" class="uri">https://doi.org/10.1007/s41109-019-0179-3</a></li>
+<li>Chazal, F., &amp; Michel, B. (2021). An introduction to topological data analysis: Fundamental and practical aspects for data scientists. arXiv:1710.04019 [cs, Math, Stat]. Retrieved from <a href="http://arxiv.org/abs/1710.04019" class="uri">http://arxiv.org/abs/1710.04019</a></li>
+<li>Ghrist, R. (2018). Homological algebra and data. In M. Mahoney, J. Duchi, &amp; A. Gilbert (Eds.), <em>IAS/Park City Mathematics Series</em> (Vol. 25, pp.&nbsp;273–325). Providence, Rhode Island: American Mathematical Society. Retrieved from <a href="http://www.ams.org/pcms/025" class="uri">http://www.ams.org/pcms/025</a></li>
+<li>Horak, D., Maletić, S., &amp; Rajković, M. (2009). Persistent homology of complex networks. <em>Journal of Statistical Mechanics</em>, 2009(03), P03034. <a href="https://doi.org/10.1088/1742-5468/2009/03/P03034" class="uri">https://doi.org/10.1088/1742-5468/2009/03/P03034</a></li>
+<li>Sheffar, D. (2020). Introductory topological data analysis. arXiv:2004.04108 [math]. Retrieved from <a href="http://arxiv.org/abs/2004.04108" class="uri">http://arxiv.org/abs/2004.04108</a></li>
+<li>Smith, A. D., Dłotko, P., &amp; Zavala, V. M. (2021). Topological data analysis: Concepts, computation, and applications in chemical engineering. <em>Computers &amp; Chemical Engineering</em>, 146, 107202. <a href="https://doi.org/10.1016/j.compchemeng.2020.107202" class="uri">https://doi.org/10.1016/j.compchemeng.2020.107202</a></li>
+</ul>
+</section>
+<section id="applications" class="level3">
+<h3 class="anchored" data-anchor-id="applications">Applications</h3>
+<ul>
+<li>Carstens, C. J., &amp; Horadam, K. J. (2013). Persistent homology of collaboration networks. <em>Mathematical Problems in Engineering</em>, 2013, e815035. <a href="https://doi.org/10.1155/2013/815035" class="uri">https://doi.org/10.1155/2013/815035</a></li>
+<li>Gidea, M. (2017). Topological data analysis of critical transitions in financial networks. In E. Shmueli, B. Barzel, &amp; R. Puzis (Eds.), <em>3rd International Winter School and Conference on Network Science</em> (pp.&nbsp;47–59). Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-55471-6_5" class="uri">https://doi.org/10.1007/978-3-319-55471-6_5</a></li>
+<li>Guss, W. H., &amp; Salakhutdinov, R. (2018, February 13). On Characterizing the Capacity of Neural Networks using Algebraic Topology. arXiv [cs.LG]. Retrieved from <a href="http://arxiv.org/abs/1802.04443" class="uri">http://arxiv.org/abs/1802.04443</a></li>
+<li>Hajij, M., Wang, B., Scheidegger, C., &amp; Rosen, P. (2017). Visual detection of structural changes in time-varying graphs using persistent homology. arXiv:1707.06683 [cs]. Retrieved from <a href="http://arxiv.org/abs/1707.06683" class="uri">http://arxiv.org/abs/1707.06683</a></li>
+<li>Ignacio, P. S. P., &amp; Darcy, I. K. (2019). Tracing patterns and shapes in remittance and migration networks via persistent homology. <em>EPJ Data Science</em>, 8(1), 1–25. <a href="https://doi.org/10.1140/epjds/s13688-018-0179-z" class="uri">https://doi.org/10.1140/epjds/s13688-018-0179-z</a></li>
+<li>Lee, H., Kang, H., Chung, M. K., Kim, B.-N., &amp; Lee, D. S. (2012). Persistent brain network homology from the perspective of dendrogram. <em>IEEE Transactions on Medical Imaging</em>, 31(12), 2267–2277. <a href="https://doi.org/10.1109/TMI.2012.2219590" class="uri">https://doi.org/10.1109/TMI.2012.2219590</a></li>
+<li>Rieck, B., Fugacci, U., Lukasczyk, J., &amp; Leitte, H. (2018). Clique community persistence: A topological visual analysis approach for complex networks. <em>IEEE Transactions on Visualization and Computer Graphics</em>, 24(1), 822–831. <a href="https://doi.org/10.1109/TVCG.2017.2744321" class="uri">https://doi.org/10.1109/TVCG.2017.2744321</a></li>
+<li>Hickok, A., Needell, D., &amp; Porter, M. A. (2021). Analysis of spatiotemporal anomalies using persistent homology: case studies with COVID-19 data. arXiv:2107.09188 [physics, Q-Bio]. Retrieved from <a href="http://arxiv.org/abs/2107.09188" class="uri">http://arxiv.org/abs/2107.09188</a></li>
+<li>Chowdhury, S., &amp; Mémoli, F. (2017). Persistent path homology of directed networks. arXiv:1701.00565 [math]. Retrieved from <a href="http://arxiv.org/abs/1701.00565" class="uri">http://arxiv.org/abs/1701.00565</a></li>
+</ul>
+</section>
+<section id="algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="algorithms">Algorithms</h3>
+<ul>
+<li>Kannan, H., Saucan, E., Roy, I., &amp; Samal, A. (2019). Persistent homology of unweighted complex networks via discrete Morse theory. <em>Scientific Reports</em>, 9(1), 13817. <a href="https://doi.org/10.1038/s41598-019-50202-3" class="uri">https://doi.org/10.1038/s41598-019-50202-3</a></li>
+<li>Petri, G., Scolamiero, M., Donato, I., &amp; Vaccarino, F. (2013). Topological strata of weighted complex networks. <em>PloS One</em>, 8(6), e66506. <a href="https://doi.org/10.1371/journal.pone.0066506" class="uri">https://doi.org/10.1371/journal.pone.0066506</a></li>
+</ul>
+
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>math</category>
+  <guid>https://viveks.me/notebooks/posts/topological-data-analysis/index.html</guid>
+  <pubDate>Fri, 16 Jun 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Agent-Based Model Calibration</title>
   <link>https://viveks.me/notebooks/posts/abm-calibration/index.html</link>
@@ -265,7 +321,7 @@ Nes, E. H. van, Scheffer, M., Brovkin, V., Lenton, T. M., Ye, H., Deyle, E., &am
 <h2 class="anchored" data-anchor-id="things-i-need-to-think-about-more">Things I Need To Think About More</h2>
 <ul>
 <li>Methods for reconstructing networks from potentially noisy simulations</li>
-<li>Use of network invariants for dimension-reduction. Maybe topological data analysis has some application?</li>
+<li>Use of network invariants for dimension-reduction. Maybe <a href="../topological-data-analysis/">topological data analysis</a> has some application?</li>
 </ul>
 </section>
 <section id="relevant-reading" class="level2">

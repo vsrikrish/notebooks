@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/topological-data-analysis/index.html",
       "/posts/state-space-reconstruction/index.html",
       "/posts/abm-calibration/index.html",
       "/posts/agent-based-modeling/index.html",
