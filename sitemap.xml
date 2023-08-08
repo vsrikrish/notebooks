@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://viveks.me/notebooks/index.html</loc>
-    <lastmod>2023-06-16T17:34:53.784Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/about.html</loc>
-    <lastmod>2023-06-16T17:34:54.416Z</lastmod>
+    <loc>https://viveks.me/notebooks/posts/robustness/index.html</loc>
+    <lastmod>2023-08-08T14:05:58.415Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/state-space-reconstruction/index.html</loc>
-    <lastmod>2023-06-16T17:34:54.984Z</lastmod>
+    <lastmod>2023-08-08T14:05:59.118Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/model-discrepancy/index.html</loc>
-    <lastmod>2023-06-16T17:34:55.312Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/uncanny-valley-systems-modeling/index.html</loc>
-    <lastmod>2023-06-16T17:34:55.632Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
-    <lastmod>2023-06-16T17:34:56.052Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/abm-calibration/index.html</loc>
-    <lastmod>2023-06-16T17:34:56.628Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/agent-based-modeling/index.html</loc>
-    <lastmod>2023-06-16T17:34:57.268Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/robustness/index.html</loc>
-    <lastmod>2023-06-16T17:34:57.764Z</lastmod>
-  </url>
-  <url>
-    <loc>https://viveks.me/notebooks/posts/information-geometry/index.html</loc>
-    <lastmod>2023-06-16T17:34:58.208Z</lastmod>
+    <lastmod>2023-08-08T14:05:59.649Z</lastmod>
   </url>
   <url>
     <loc>https://viveks.me/notebooks/posts/topological-data-analysis/index.html</loc>
-    <lastmod>2023-06-16T17:34:58.636Z</lastmod>
+    <lastmod>2023-08-08T14:06:00.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/agent-based-modeling/index.html</loc>
+    <lastmod>2023-08-08T14:06:00.824Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/abm-calibration/index.html</loc>
+    <lastmod>2023-08-08T14:06:01.418Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/uncanny-valley-systems-modeling/index.html</loc>
+    <lastmod>2023-08-08T14:06:01.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/deep-uncertainty-subjective-probability/index.html</loc>
+    <lastmod>2023-08-08T14:06:02.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/posts/information-geometry/index.html</loc>
+    <lastmod>2023-08-08T14:06:02.921Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/index.html</loc>
+    <lastmod>2023-08-08T14:06:03.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://viveks.me/notebooks/about.html</loc>
+    <lastmod>2023-08-08T14:06:03.928Z</lastmod>
   </url>
 </urlset>

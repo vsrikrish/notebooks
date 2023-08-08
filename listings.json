@@ -2,14 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/uncanny-valley-systems-modeling/index.html",
       "/posts/topological-data-analysis/index.html",
-      "/posts/state-space-reconstruction/index.html",
-      "/posts/abm-calibration/index.html",
+      "/posts/uncanny-valley-systems-modeling/index.html",
       "/posts/agent-based-modeling/index.html",
+      "/posts/abm-calibration/index.html",
       "/posts/information-geometry/index.html",
-      "/posts/model-discrepancy/index.html",
       "/posts/robustness/index.html",
+      "/posts/model-discrepancy/index.html",
+      "/posts/state-space-reconstruction/index.html",
       "/posts/deep-uncertainty-subjective-probability/index.html"
     ]
   }
